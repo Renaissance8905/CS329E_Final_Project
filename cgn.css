@@ -1,0 +1,189 @@
+/* Reset Function */
+header, footer, nav, article, section, figure, figcaption, h1, h2, h3, ul, li, body, div, p, img
+{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    border: 0;
+}
+
+
+/* Sectioner */
+ header,main, footer, #profile {
+    background: goldenrod;
+    border: 2px solid grey;
+    border-radius: 1em;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    font-family: "Georgia", "Arial", serif;
+
+}
+
+#logo{
+    float:left;
+    width:25%;
+    
+}
+
+#logo img{
+    width:320px;
+    height:125px;
+    top:0px;
+    left:0px;
+}
+#title{
+    float:left;
+    margin:10px;
+    width:70%;
+    
+}
+h1 {
+    font-size: 2.8rem;
+    text-align: center;
+    vertical-align: middle;
+    letter-spacing: 3px;
+}
+h2 {
+    font-size: 1rem;
+    font-style: italic;
+    text-align: center;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+#navi{
+    float:left;
+    max-width: 60%;
+    font-size:1.2rem;
+    margin-left:80px;
+
+}
+#navi nav p {
+    margin-left:30px;
+    
+}
+#navi nav p a{
+    padding:20px;
+    letter-spacing:1.5px;
+
+}
+#login{
+    float:right;
+    margin_top:5px;
+
+    
+}
+html {
+    background: lightblue;
+    padding-left: 4em;
+    padding-right: 4em;
+    padding-bottom: 6em;
+    font-family: sans-serif;
+}
+
+
+
+header {
+    padding: 1em;
+    position: absolute;
+    top: 0em;
+    left: 50px;
+    height: 130px;
+    width: 1250px;
+}
+
+main {
+    position: absolute;
+    top: 150px;
+    left:0px;
+    max-width: 1050px;
+    height: 1000px;
+    margin-top:30px;
+    
+}
+
+footer {
+    font-stretch: extra-expanded;
+    padding: 1em;
+    position: absolute;
+    top: 1180px;
+    left:-5px;
+    width: 1250px;
+    text-align: center;
+    
+}
+
+footer p{
+    display:inline;
+    margin:2px;
+    padding:2px;
+}
+#profile {
+    position: absolute;
+    top: 150px;
+    left: 1070px;
+    width: 190px;
+    height: 1000px;
+    margin-top:30px;
+    padding-left: 20px;
+}
+
+#profile p {
+    padding: 1em;
+}
+
+#profile div {
+    margin: 2em 1em 1em 1em;
+    border-bottom: 1px solid grey;
+    border-top: 1px solid grey;
+    padding-top: 2em;
+
+}
+
+header div {
+    text-align: right;
+}
+
+#about div {
+    border-bottom: 1px solid grey;
+    margin: 2em;
+    margin-top:0px;
+    padding: 3em;
+    padding-top: 1em;
+    text-align: justify;
+}
+
+#profile div textarea {
+    height: 6em;
+    margin-top: 1em;
+}
+
+h3 {
+    font-size: large;
+    padding: 1em 0em 1em 0em;
+}
+
+#profile h3 {
+    text-align: center;
+}
+
+
+a:hover{
+    color:cornflowerblue;
+}
+a:visited{
+    color:dimgrey;
+    
+}
+
+#standby {
+    min-width: 100%;
+    margin-top: 50px;
+    margin-left: 50px;
+    text-align: center;
+}
+
+#standby div h3 {
+    font-size: xx-large;
+}
+

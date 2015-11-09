@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="cgn.css">
+    <script type="text/javascript" src = "jquery-1.11.3.js" ></script>
+    <script type="text/javascript" src="cgn.js"></script>
+    <meta charset="UTF-8">
+    <title>Create New Account</title>
+</head>
+<body>
+
+<header>
+    <div id = "logo"><img src="2.png" alt="logo"/></div>
+    <div id = "title">
+        <h1>Create An Account!</h1>
+    </div>
+
+    <div id= "navi">
+        <nav>
+            <p>
+                <a href="home.html" > Home</a> | <a href="Games.html"> Games</a> | <a href="Categories.html">Categories</a> | <a href="Tutorials.html">Tutorials</a> | <a href="Events.html">Events</a>
+            </p>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <form id="regForm" action="" method="POST">
+        <table>
+            <tr>
+                <td>
+                    <label>Username:</label>
+                </td>
+                <td>
+                    <input name="username", type="text", value="" />
+                </td>
+                <td>
+                    <ul>
+                        <li>Must be 6-10 character in length</li>
+                        <li>Must begin with a letter</li>
+                        <li>May contain only letters and digits</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td>
+                    <label>Password:</label>
+                </td>
+                <td>
+                    <input name="pass", type="password", value="" />
+                </td>
+                <td>
+                    <ul>
+                        <li>Must be 6-10 characters in length</li>
+                        <li>May contain only letters, digits, and _</li>
+                        <li>Must contain uppercase, lowercase, and a number</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Confirm Password:</label>
+                </td>
+                <td>
+                    <input name="pass_repeat", type="password", value="" />
+                </td>
+                <td>
+                    <ul>
+                        <li>Passwords must match</li>
+                        <li>Password is case-sensitive</li>
+                    </ul>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <input type = "button" name = "regButton" value = "Register" />
+        <input type = "reset" value = "Clear" />
+    </form>
+</main>
+
+
+</body>
