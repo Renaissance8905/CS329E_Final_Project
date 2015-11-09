@@ -8,6 +8,8 @@
 
 $(document).ready(function () {
 
+
+    // validator for registration attempt
     $("#regButton").click( function  () {
         var fields = document.getElementById("regForm");
         var username = fields.username.value;
