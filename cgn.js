@@ -37,4 +37,12 @@ $(document).ready(function () {
     });
 
 
+    $("#newgames, #videos, #galleries").click( function () {
+       $(this).children("p").toggle("hidden");
+    });
+
+
+
+
+
 });
