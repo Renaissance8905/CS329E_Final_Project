@@ -37,7 +37,8 @@ $(document).ready(function () {
     });
 
 
-    $("#newgames, #videos, #galleries").click( function () {
+    // show/hide front page articles on click
+    $("#newgames", "#videos", "#galleries").click( function () {
        $(this).children("p").toggle("hidden");
     });
 
