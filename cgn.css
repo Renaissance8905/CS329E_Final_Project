@@ -10,7 +10,7 @@ header, footer, nav, article, section, figure, figcaption, h1, h2, h3, ul, li, b
 
 
 /* Sectioner */
- header,main, footer, #profile {
+header,main, footer, #profile {
     background: goldenrod;
     border: 2px solid grey;
     border-radius: 1em;
@@ -19,13 +19,91 @@ header, footer, nav, article, section, figure, figcaption, h1, h2, h3, ul, li, b
     font-family: "Georgia", "Arial", serif;
 
 }
-#regi tr td{
-    padding: 20px;
+
+
+
+/* !------------------ For Login/Signup Page ----------------! */
+.nav-tabs {
+    background-color: lightblue;
+    border: none;
+    width: 500px;
+
 }
+.nav-tabs > li {
+    width: 210px;
+}
+
+.nav-tabs > li > a{
+    border: none;
+    background-color: darkgrey;
+    font-size: large;
+    color: black;
+    text-align: center;
+}
+.nav-tabs > li > a:hover{
+    background-color: goldenrod !important;
+    border: medium none;
+    color:#fff;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover{
+    background-color: goldenrod !important;
+    color: black;
+}
+
+#regis {
+    width: 420px;
+    height: 520px;
+    background-color: lightblue;
+    border: none;
+    margin-left: 30%;
+    margin-bottom: 100px;
+}
+
+#regis > div {
+    background-color: goldenrod;
+    border-radius: 5px;
+
+}
+
+.signinup.center {
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 50px;
+ }
+
+.signinup tr td {
+    padding: 10px;
+    font-size: large;
+    width: 140px;
+}
+
+ #registerTab tr:nth-child(even) {
+     height: 75px;
+ }
+
+#registerTab tr:nth-child(even) td {
+    padding-left: 30px;
+    font-size: small;
+}
+
+#registerTab tr:nth-child(odd) {
+     height: 30px;
+ }
+
+#loginTab tr {
+    height: 60px;
+}
+/* !------------------- END LOGIN/SIGNUP -----------! */
+
+
+
+
 #logo{
     float:left;
     width:25%;
-    
 }
 
 #logo img{
@@ -184,9 +262,9 @@ tfoot td{
     left: 0px;
 }
 tfoot td input{
-
     margin: 10px;
 }
+
 #standby {
     min-width: 92%;
     margin-top: 30px;
@@ -195,12 +273,4 @@ tfoot td input{
 
 #standby div h3 {
     font-size: xx-large;
-}
-
-#regis{
-    width:780px;
-    height: 500px;
-}
-#regi tr{
-    height:100px;;
 }
