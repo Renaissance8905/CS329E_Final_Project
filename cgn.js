@@ -8,9 +8,9 @@
 
 $(document).ready(function () {
 
-
     // validator for registration attempt
     $("#regButton").click( function  () {
+        var formAlert;
         var fields = document.getElementById("regForm");
         var username = fields.username.value;
         var pass = fields.pass.value;
@@ -24,17 +24,23 @@ $(document).ready(function () {
                                 if (pass.match(/[a-z]/)) {
                                     if (pass.match(/[A-Z]/)) {
                                         if (pass.match(/[0-9]/)) {
-                                            return;
-                                        } else {alert("Password must have at least one number");}
-                                    } else {alert("Password must have at least one uppercase letter");}
-                                } else {alert("Password must have at least one lowercase letter");}
-                            } else {alert("Password can only contain letters, digits, and underscore ( _ )");}
-                        } else {alert("Password should be between 6 and 10 characters");}
-                    } else {alert("Passwords do not match");}
-                } else {alert('Username can only contain letters and digits');}
-            } else {alert("Username must begin with a letter");}
-        } else {alert("Username should be between 6 and 10 characters");}
+                                            formAlert = ("VALID");
+                                        } else {formAlert = ("Password must have at least one number");}
+                                    } else {formAlert = ("Password must have at least one uppercase letter");}
+                                } else {formAlert = ("Password must have at least one lowercase letter");}
+                            } else {formAlert = ("Password can only contain letters, digits, and underscore ( _ )");}
+                        } else {formAlert = ("Password should be between 6 and 10 characters");}
+                    } else {formAlert = ("Passwords do not match");}
+                } else {formAlert = ('Username can only contain letters and digits');}
+            } else {formAlert = ("Username must begin with a letter");}
+        } else {formAlert = ("Username should be between 6 and 10 characters");}
+
+        $("#advisor").html('<div class="alert alert-danger">'+formAlert+'</div>')
+
     });
+
+
+    $()
 
 
     // show/hide front page articles on click

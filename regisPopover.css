@@ -1,0 +1,89 @@
+.modal-body {
+    overflow-y: scroll;
+    height: 100%;
+}
+
+.nav-tabs {
+    border: none;
+    background-color: white;
+    padding-top: 20px;
+
+}
+.nav-tabs > li {
+    width: 250px;
+    border-radius: 10px;
+    padding-right: 10px;
+}
+
+.nav-tabs > li > a{
+    border: none;
+    background-color: darkgoldenrod;
+    font-size: large;
+    color: black;
+    text-align: center;
+}
+.nav-tabs > li > a:hover{
+    background-color: lightgoldenrodyellow !important;
+    border: medium none;
+    color: black;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover{
+    background-color: goldenrod !important;
+    color: black;
+}
+
+#regis > div {
+    border-radius: 5px;
+}
+
+.signinup.center {
+    margin: auto;
+    width: auto;
+}
+
+
+
+.modal-dialog {
+    margin: 20px;
+    background-color: goldenrod;
+}
+
+.tabbable {
+    border-radius: 40px;
+}
+
+.signinup tr td {
+    height: 30px;
+    padding-top: 20px;
+    width: 140px;
+}
+
+.signinup tr td label {
+    font-size: medium;
+
+}
+
+
+#registerTab tr:nth-child(4) td {
+    height: 120px;
+    padding: 0px;
+}
+
+
+
+#loginTab tr {
+    height: 60px;
+}
+
+.modal-footer {
+    background-color: white;
+    color: white;
+}
+
+#advisor ul {
+    padding-left: 30px;
+    font-size: small;
+}

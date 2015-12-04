@@ -21,86 +21,6 @@ header,main, footer, #profile {
 }
 
 
-
-/* !------------------ For Login/Signup Page ----------------! */
-.nav-tabs {
-    background-color: lightblue;
-    border: none;
-    width: 500px;
-
-}
-.nav-tabs > li {
-    width: 210px;
-}
-
-.nav-tabs > li > a{
-    border: none;
-    background-color: darkgrey;
-    font-size: large;
-    color: black;
-    text-align: center;
-}
-.nav-tabs > li > a:hover{
-    background-color: goldenrod !important;
-    border: medium none;
-    color:#fff;
-}
-
-.nav-tabs > li.active > a,
-.nav-tabs > li.active > a:focus,
-.nav-tabs > li.active > a:hover{
-    background-color: goldenrod !important;
-    color: black;
-}
-
-#regis {
-    width: 420px;
-    height: 520px;
-    background-color: lightblue;
-    border: none;
-    margin-left: 30%;
-    margin-bottom: 100px;
-}
-
-#regis > div {
-    background-color: goldenrod;
-    border-radius: 5px;
-
-}
-
-.signinup.center {
-    margin-left:auto;
-    margin-right:auto;
-    margin-top: 50px;
- }
-
-.signinup tr td {
-    padding: 10px;
-    font-size: large;
-    width: 140px;
-}
-
- #registerTab tr:nth-child(even) {
-     height: 75px;
- }
-
-#registerTab tr:nth-child(even) td {
-    padding-left: 30px;
-    font-size: small;
-}
-
-#registerTab tr:nth-child(odd) {
-     height: 30px;
- }
-
-#loginTab tr {
-    height: 60px;
-}
-/* !------------------- END LOGIN/SIGNUP -----------! */
-
-
-
-
 #logo{
     float:left;
     width:25%;
@@ -133,20 +53,32 @@ h2 {
 }
 #navi{
     float:left;
-    max-width: 60%;
+    max-width: 70%;
     font-size:1.2rem;
-    margin-left:80px;
+    margin-left:0px;
 
 }
+
+#navi nav {
+    alignment: center;
+}
+
 #navi nav p {
-    margin-left:30px;
-    
+    margin-left:50px;
+
 }
 #navi nav p a{
-    padding:20px;
+    padding:15px;
     letter-spacing:1.5px;
+    font-size: medium;
 
 }
+
+#navi nav p strong {
+    font-size: large;
+    color: grey;
+}
+
 #login{
     float:right;
     margin_top:5px;
