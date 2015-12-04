@@ -24,7 +24,11 @@ $(document).ready(function () {
                                 if (pass.match(/[a-z]/)) {
                                     if (pass.match(/[A-Z]/)) {
                                         if (pass.match(/[0-9]/)) {
-                                            formAlert = ("VALID");
+
+                                            // Send User Info for Processing
+                                            newUser();
+                                            return;
+
                                         } else {formAlert = ("Password must have at least one number");}
                                     } else {formAlert = ("Password must have at least one uppercase letter");}
                                 } else {formAlert = ("Password must have at least one lowercase letter");}
@@ -40,7 +44,35 @@ $(document).ready(function () {
     });
 
 
-    $()
+    function newUser () {
+        var xhr;
+        if (window.ActiveXObject) {
+            xhr = new ActiveXObject ("Microsoft.XMLHTTP");
+        }
+        else {
+            xhr = new XMLHttpRequest();
+        }
+        var url = "login-register.php";
+        var params = "username=***&password=*****&c_password=****";
+
+        xhr.open("POST", url, true);
+
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.setRequestHeader("Content-length", params.length);
+        xhr.setRequestHeader("Connection", "close");
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                document.getElementById("gotFood").innerHTML = "<tr><th>Name</th><th>Items</th></tr>" + xhr.responseText;
+            } else {
+                document.getElementById("gotFood").innerHTML = "<tr><th>Name</th><th>Items</th></tr>" + xhr.responseText;
+
+            }
+        };
+
+        xhr.send(params);
+    }
+
 
 
     // show/hide front page articles on click

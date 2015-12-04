@@ -3,9 +3,19 @@
 
 <head>
 
-    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+
 
     <script type="text/javascript" src="cgn.js"></script>
     <script type="text/javascript" src="regi.js"></script>
@@ -43,58 +53,63 @@
         </div>
     </header>
 
+
     <!------ BEGIN REGISTRATION POPOVER MODAL --------->
-    <div id="regis" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="windowTitleLabel">
+    <div id="regis" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="windowTitleLabel">
         <div class="modal-dialog" role="document">
-            <div class="tabbable">
-                <ul class="nav nav-tabs">
-                    <li class="active"><a href="#registration" data-toggle="tab">Register</a></li>
-                    <li><a href="#signin" data-toggle="tab">Log In</a></li>
-                </ul>
-                <div class="tab-content">
-                    <div id ="registration" class="tab-pane fade active in">
-                        <form id="regForm" action="" method="POST">
-                            <table id="registerTab" class="signinup center">
-                                <tr>
-                                    <td><label for="reg_user">Username:</label></td>
-                                    <td><input name="username" id="reg_user" type="text" value="" /></td>
-                                </tr>
-                                <tr>
-                                    <td><label for="reg_pass">Password:</label></td>
-                                    <td><input name="pass" id="reg_pass" type="password" value="" /></td>
-                                </tr>
-                                <tr>
-                                    <td><label for="reg_pass_repeat">Confirm Password:</label></td>
-                                    <td><input name="pass_repeat" id="reg_pass_repeat" type="password" value="" /></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2"><span id="advisor"></span></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2"><input type="button" class="btn btn-block" id="regButton" value="Register" /></td>
-                                </tr>
-                            </table>
-                        </form>
-                    </div>
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="tabbable">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#registration" data-toggle="tab">Register</a></li>
+                            <li><a href="#signin" data-toggle="tab">Log In</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id ="registration" class="tab-pane fade active in">
+                                <form id="regForm" action="" method="POST">
+                                    <table id="registerTab" class="signinup center">
+                                        <tr>
+                                            <td><label for="reg_user">Username:</label></td>
+                                            <td><input name="username" id="reg_user" type="text" value="" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="reg_pass">Password:</label></td>
+                                            <td><input name="pass" id="reg_pass" type="password" value="" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="reg_pass_repeat">Confirm Password:</label></td>
+                                            <td><input name="pass_repeat" id="reg_pass_repeat" type="password" value="" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2"><span id="advisor"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2"><input type="button" class="btn btn-primary btn-block" id="regButton" value="Register" /></td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </div>
 
 
-                    <div id="signin" class="tab-pane fade">
-                        <form id="loginForm" action="" method="POST">
-                            <table id="loginTab" class="signinup center">
-                                <tr>
-                                    <td><label for="login_user">Username:</label></td>
-                                    <td><input name="username" id="login_user" type="text" value="" /></td>
-                                </tr>
-                                <tr>
-                                    <td><label for="login_pass">Password:</label></td>
-                                    <td><input name="pass" id="login_pass" type="password" value="" /></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2"><input type="button" class="btn btn-block" id="loginButton" value="Log In" /></td>
-                                </tr>
-                            </table>
+                            <div id="signin" class="tab-pane fade">
+                                <form id="loginForm" action="" method="POST">
+                                    <table id="loginTab" class="signinup center">
+                                        <tr>
+                                            <td><label for="login_user">Username:</label></td>
+                                            <td><input name="username" id="login_user" type="text" value="" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="login_pass">Password:</label></td>
+                                            <td><input name="pass" id="login_pass" type="password" value="" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2"><input type="button" class="btn btn-block" id="loginButton" value="Log In" /></td>
+                                        </tr>
+                                    </table>
 
-                        </form>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
