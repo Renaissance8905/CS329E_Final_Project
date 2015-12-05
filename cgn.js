@@ -26,7 +26,9 @@ $(document).ready(function () {
                                         if (pass.match(/[0-9]/)) {
 
                                             // Send User Info for Processing
-                                            newUser();
+                                            $("#dismiss_regis").click();
+                                            alert("success");
+                                            newUser(username, pass, pass_repeat);
                                             return;
 
                                         } else {formAlert = ("Password must have at least one number");}
@@ -44,7 +46,7 @@ $(document).ready(function () {
     });
 
 
-    function newUser () {
+    function newUser (usr, pass, cpass) {
         var xhr;
         if (window.ActiveXObject) {
             xhr = new ActiveXObject ("Microsoft.XMLHTTP");
@@ -52,8 +54,11 @@ $(document).ready(function () {
         else {
             xhr = new XMLHttpRequest();
         }
+
+
+
         var url = "login-register.php";
-        var params = "username=***&password=*****&c_password=****";
+        var params = "username="+encodeURI(usr)+"&password="+encodeURI(pass)+"&c_password="+encodeURI(cpass)+"&request=register";
 
         xhr.open("POST", url, true);
 
@@ -63,10 +68,11 @@ $(document).ready(function () {
 
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4 && xhr.status == 200) {
-                document.getElementById("gotFood").innerHTML = "<tr><th>Name</th><th>Items</th></tr>" + xhr.responseText;
-            } else {
-                document.getElementById("gotFood").innerHTML = "<tr><th>Name</th><th>Items</th></tr>" + xhr.responseText;
+                var resp = xhr.responseText;
 
+                //$("#userInfo").text(resp);
+
+                alert(resp);
             }
         };
 

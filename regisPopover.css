@@ -1,8 +1,9 @@
-.modal {position: absolute;}
-
 .modal-body {
     overflow-y: scroll;
     height: 100%;
+}
+.tabbable{
+    text-align: center;
 }
 
 .nav-tabs {
@@ -12,6 +13,7 @@
 
 }
 .nav-tabs > li {
+    display: inline;
     width: 250px;
     border-radius: 10px;
     padding-right: 10px;
@@ -46,9 +48,13 @@
     width: auto;
 }
 
-.tabbable {
-    padding-bottom: 40px;
-    border-radius: 4px;
+.modal-dialog {
+    position:absolute;
+    margin:10% 30%;
+    background-color: goldenrod;
+}
+
+.tab-content {
     background-color: goldenrod;
 }
 
@@ -64,20 +70,29 @@
 }
 
 
-#registerTab tr:nth-child(4) td {
-    height: 120px;
-    padding: 0px;
-}
 
+
+#registerTab tr:nth-child(4) td {
+    margin-top: 10px;
+    height: 140px;
+    padding-top: 20px;
+}
 
 
 #loginTab tr {
     height: 60px;
 }
+.loginb{
+    height:50px;
+    width:100px;
+    background:#FE980F;
+    border: 0 none;
+    margin-bottom: 24px;
+}
 
 
 
-#advisor ul {
-    padding-left: 30px;
+#advisor ul{
+    padding-left: 0px;
     font-size: small;
 }
