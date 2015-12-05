@@ -19,14 +19,17 @@ $cpass = md5($cpass);
 
 
 
-if ($_POST["request"] = "register") {
+if ($_POST["request"] == "register" && isset($_POST["username"])) {
     register($usr, $pass, $cpass);
 }
-elseif ($_POST["request"] = "login") {
+elseif ($_POST["request"] == "login" && isset($_POST["username"])) {
     login($usr, $pass);
 }
-elseif ($_POST["request"] = "checklogin") {
+elseif ($_POST["request"] == "checklogin") {
     isLoggedIn();
+}
+elseif ($_POST["request"] == "logout") {
+    logout();
 }
 else {
     die("bad request");
@@ -50,7 +53,6 @@ function register ($usr, $pass, $cpass) {
     mysqli_stmt_close($stmt);
 
     login($usr, $pass);
-    return;
 }
 
 
@@ -58,16 +60,20 @@ function login ($usr, $pass) {
     $conn = conn();
     $table = "fp_users";
 
-    $sql = "SELECT username, days_active, games_played, contact FROM $table WHERE username = \"$usr\"";
+    $sql = "SELECT username, days_active, games_played, contact FROM $table WHERE username = \"$usr\" AND password = \"$pass\"";
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {
         $row = $result->fetch_row();
         $profile =  array("username"=>$row[0], "days_active"=>$row[1], "games_played"=>$row[2], "contact"=>$row[3]);
+        $profile = (json_encode($profile));
 
-        setcookie("loggedin", json_encode($profile), time()+(86400*7), "/"); // Active 7 Days
+        setcookie('loggedIn', $profile, time()+(86400*7), '/'); // Active 7 Days
+
+        echo ($profile);
+
     } elseif (!mysqli_query($conn, $result)) {
-        echo ("ERROR: " . mysqli_error($result)) . " :: " . mysqli_errno($result);
+        echo ("ERROR: " . mysqli_error($conn)) . " :: " . mysqli_errno($conn);
         return;
     } else {
         echo "login failed";
@@ -76,24 +82,32 @@ function login ($usr, $pass) {
 
     $result->free();
     $conn->close();
-
-    isLoggedIn();
     return;
 }
 
 function isLoggedIn () {
-    if (isset($_COOKIE["loggedin"])) {
-        $profile = json_decode($_COOKIE["loggedin"]);
-        setcookie("loggedIn", json_encode($profile), time()+(86400*7), "/"); // Refresh Cookie
+    if (isset($_COOKIE['loggedIn'])) {
+        $c = $_COOKIE['loggedIn'];
 
-        echo json_encode($profile);
-        return;
+        setcookie('loggedIn', $c, time()+(86400*7), '/'); // Refresh Cookie
+
+        echo ($c);
     } else {
-        echo("HOWDY DOODY FUCK YOU");
-        return;
+        echo("INVALID");
     }
+    return;
 }
 
+
+function logout () {
+    if (isset($_COOKIE['loggedIn'])) {
+        setcookie('loggedIn', null, 0, '/');
+        echo("LOGGED OUT");
+    } else {
+        echo("NO LOGIN FOUND");
+    }
+    return;
+}
 
 
 ?>

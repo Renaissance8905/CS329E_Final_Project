@@ -99,7 +99,9 @@
                         <div class="shop-menu pull-right">
 
                             <ul class="nav navbar-nav">
-                                <li><a href="#regis" role="button" class="link" data-toggle="modal"><i class="fa fa-lock"></i>Login</a></li>
+                                <span  id="regisButton"><li><a href="#regis" role="button" class="link" data-toggle="modal"><i class="fa fa-lock"></i>Login</a></li></span>
+                                <span  id="profileButton" hidden="hidden"><li><a href="#profile" role="button" class="link" data-toggle="modal">My Account</a></li></span>
+
                             </ul>
                         </div>
                     </div>
@@ -108,6 +110,10 @@
         </div>
         <!--/header-middle-->
 
+
+
+
+<!--------------- BEGIN REGISTRATION POPOVER MODAL ------------------>
    <div id="regis" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="windowTitleLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -142,6 +148,7 @@
                                         <tr>
                                             <td colspan="2"><input type="button" class="btn btn-primary btn-block loginb" id="regButton" value="Register" /></td>
                                         </tr>
+                                        <input type="reset" id="resetSignin" hidden="hidden" />
                                     </table>
                                 </form>
                             </div>
@@ -161,8 +168,8 @@
                                         <tr>
                                             <td colspan="2"><input type="button" class="btn btn-primary btn-block loginb" id="loginButton" value="Log In" /></td>
                                         </tr>
+                                        <input type="reset" id="resetLogin" hidden="hidden" />
                                     </table>
-
                                 </form>
                             </div>
                         </div>
@@ -171,7 +178,34 @@
             </div>
         </div>
     </div>
-    <!------ END REGISTRATION POPOVER MODAL --------->
+<!--------------- END REGISTRATION POPOVER MODAL ------------------>
+<!--------------- BEGIN USER PROFILE POPOVER MODAL ------------------>
+
+        <div id="profile" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="username_header">USER'S NAME HERE</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <h4>Games Played: <span id="games_played"></span></h4>
+                        <h4>Days Active: <span id="days_active"></span></h4>
+                        <h4>Contact Info: <span id="contact_info"></span></h4>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button id="logoutButton" type="button" class="btn btn-danger" data-dismiss="modal">Log Out</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--------------- END USER PROFILE POPOVER MODAL ------------------>
+
+
+
+
 <div class="header-bottom">
             <!--header-bottom-->
             <div class="container">
@@ -198,6 +232,7 @@
                                     </ul>
                                 </li>
                                 <li><a href="contact-us.html">Contact</a></li>
+
                             </ul>
                         </div>
                     </div>
@@ -208,6 +243,8 @@
         <!--/header-bottom-->
     </header>
     <!--/header-->
+
+
 
     <section id="slider">
         <!--slider-->
@@ -306,8 +343,8 @@
                         <div class="single-widget">
                             <h2>More Sites</h2>
                             <ul class="nav nav-pills nav-stacked">
-                                <li><a href="www.ign.com">IGN</a></li>
-                                <li><a href="www.gamespot.com">Gamespot</a></li>
+                                <li><a href="http://www.ign.com">IGN</a></li>
+                                <li><a href="http://www.gamespot.com">Gamespot</a></li>
                                 <li><a href="http://www.polygon.com">Polygon</a></li>
                                 <li><a href="http://www.metacritic.com/game">Metacritic</a></li>
                                 <li><a href="http://www.escapistmagazine.com">Escapist</a></li>

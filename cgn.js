@@ -8,7 +8,9 @@
 
 $(document).ready(function () {
 
-    // validator for registration attempt
+    requestUser("request=checklogin");
+
+    // When Registration attempt is made. Validate User/Pass format before sending request.
     $("#regButton").click( function  () {
         var formAlert;
         var fields = document.getElementById("regForm");
@@ -27,8 +29,10 @@ $(document).ready(function () {
 
                                             // Send User Info for Processing
                                             $("#dismiss_regis").click();
-                                            alert("success");
-                                            newUser(username, pass, pass_repeat);
+                                            $("#resetSignin").click();
+                                            $("#resetLogin").click();
+                                            var params = "username="+encodeURI(username)+"&password="+encodeURI(pass)+"&c_password="+encodeURI(pass_repeat)+"&request=register";
+                                            requestUser(params);
                                             return;
 
                                         } else {formAlert = ("Password must have at least one number");}
@@ -46,19 +50,36 @@ $(document).ready(function () {
     });
 
 
-    function newUser (usr, pass, cpass) {
+    // When Log-In Request is made. No client-side validation necessary
+    $("#loginButton").click(function () {
+
+        var logForm = document.getElementById("loginForm");
+        var usr = logForm.username.value;
+        var pass = logForm.pass.value;
+
+        var params = "username="+encodeURI(usr)+"&password="+encodeURI(pass)+"&request=login";
+
+        requestUser(params);
+
+        $("#dismiss_regis").click();
+        $("#resetSignin").click();
+        $("#resetLogin").click();
+
+
+    });
+
+
+    $("#logoutButton").click(function () {
         var xhr;
         if (window.ActiveXObject) {
-            xhr = new ActiveXObject ("Microsoft.XMLHTTP");
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
         }
         else {
             xhr = new XMLHttpRequest();
         }
 
-
-
+        var params = "request=logout";
         var url = "login-register.php";
-        var params = "username="+encodeURI(usr)+"&password="+encodeURI(pass)+"&c_password="+encodeURI(cpass)+"&request=register";
 
         xhr.open("POST", url, true);
 
@@ -68,26 +89,86 @@ $(document).ready(function () {
 
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4 && xhr.status == 200) {
+
                 var resp = xhr.responseText;
 
-                //$("#userInfo").text(resp);
+                if (resp == "LOGGED OUT") {
 
-                alert(resp);
+                    $("#regisButton").show();
+                    $("#profileButton").hide();
+
+
+                    $("#username_header").text("");
+                    $("#games_played").text("");
+                    $("#days_active").text("");
+                    $("#contact_info").text("");
+
+                }
+
+            }
+            else if (xhr.readyState == 4) {
+                alert("ERROR: Status is " + xhr.status);
             }
         };
+        xhr.send(params);
+    });
 
+
+
+
+    // Async Request function for login/signup
+    // Expects 'params' as "username=JohnDoe&password=1234"...
+    function requestUser(params) {
+        var xhr;
+        if (window.ActiveXObject) {
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        else {
+            xhr = new XMLHttpRequest();
+        }
+
+        var url = "login-register.php";
+
+        xhr.open("POST", url, true);
+
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.setRequestHeader("Content-length", params.length);
+        xhr.setRequestHeader("Connection", "close");
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+
+                var resp = xhr.responseText;
+
+                if (resp != "INVALID") {
+
+                    $("#regisButton").hide();
+                    $("#profileButton").show();
+
+                    var userInfo = JSON.parse(resp);
+
+                    var usrnm = userInfo["username"];
+                    var days_active = userInfo["days_active"];
+                    var games_played = userInfo["games_played"];
+                    var contact = userInfo["contact"];
+
+                    $("#username_header").text(usrnm);
+                    $("#games_played").text(games_played);
+                    $("#days_active").text(days_active);
+                    $("#contact_info").text(contact);
+                }
+
+            }
+            else if (xhr.readyState == 4) {
+                alert("ERROR: Status is " + xhr.status);
+            }
+        };
         xhr.send(params);
     }
-
-
-
-    // show/hide front page articles on click
-    $("#newgames, #videos, #galleries").click( function () {
-       $(this).children("p").toggle("hidden");
-    });
 
 
 
 
 
 });
+
