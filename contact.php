@@ -310,16 +310,17 @@ function contact(){
 	    		<div class="col-sm-12">    			   			
 					<h2 class="title text-center">Contact <strong>Us</strong></h2>    			    				    				
 					<div id="gmap" class="contact-map">
-                    <img id = "contactimg" src ="feedback.jpg" alt =""/>
+                    <img src = feedback.jpg id = contactimg alt = "">
 					</div>
 				</div>			 		
 			</div>    	
     		<div class="row">  	
 	    		<div class="col-sm-8">
 	    			<div class="contact-form">
-	    				<h2 class="title text-center">Feedback</h2>
+	    				<h2 class="title text-center">FeedBack</h2>
 	    				<div class="status alert alert-success" style="display: none"></div>
-				    	<form id="contactform" class="contact-form row" action=$script name="contact-form" method="post">
+				    	<form id="main-contact-form" class="contact-form row" action = $script name="contact-form" method="post"
+                        onsubmit = "return check();">
 				            <div class="form-group col-md-6">
 				                <input type="text" name="name" class="form-control" required="required" placeholder="Name">
 				            </div>
@@ -330,10 +331,11 @@ function contact(){
 				                <input type="text" name="subject" class="form-control" required="required" placeholder="Subject">
 				            </div>
 				            <div class="form-group col-md-12">
-				                <textarea name="comments" id="comments" required="required" class="form-control" rows="8" placeholder="Your Message Here"></textarea>
-				            <div><span id="contactadvisor"></span></div>
+				                <textarea name="comments" id="message" required="required" class="form-control" rows="8" placeholder="Your Message Here"></textarea>
+				            </div>    
+                            <div><span id = "cadvisor"></span></div>
 				            <div class="form-group col-md-12">
-				                <input type="submit" name="submit" class="btn btn-primary pull-right" value="Submit">
+				                <input id = "conbutt" type="submit" name="submit" class="btn btn-primary pull-right" value="Submit" >
 				            </div>
 				        </form>
 	    			</div>
@@ -354,24 +356,29 @@ function contact(){
     	</div>	
     </div><!--/#contact-page-->
     <script type = "text/javascript">
-      $(document).ready(function () {
+     document.getElementById("main-contact-form").onsubmit = check;
+     function check(){
        var formAlert;
-       var fields = document.getElementById("contactform");
+       var fields = document.getElementById("main-contact-form");
        var names = fields.name.value;
        var email = fields.email.value;
        var subject = fields.subject.value;
       var comments = fields.comments.value;
       if (names.length != 0){
-          if (subject.length != 0){
-              if (comments.length != 0){
-                  if (email.match(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/)){
+          if (email.match(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/)){
+              if (subject.length != 0){
+                  if (comments.length != 0){
                       return;
-                  }else {formAlert = ("Enter a valid email address");}
-              }else{formAlert = ("Message cannot be empty");}
-          }else{formAlert = ("Subject cannot be empty");}
-      }else{formAlert = ("Name cannot be empty");}
-    $("#contactadvisor").html('<div class="alert alert-danger">'+formAlert+'</div>')
-      });
+                  }else {window.alert("Message cannot be empty");
+                  return false;}
+              }else{window.alert("Subject cannot be empty");
+              return false;}
+          }else{window.alert("Enter a valid email address");
+          return false;}
+      }else{window.alert("Name cannot be empty");
+      return false;}
+    
+      };
 </script>
 PAGE;
 }
