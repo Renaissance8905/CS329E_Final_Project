@@ -31,6 +31,9 @@ elseif ($_POST["request"] == "checklogin") {
 elseif ($_POST["request"] == "logout") {
     logout();
 }
+elseif ($_POST["request"] == "checkuser") {
+    isDupeUser($usr);
+}
 else {
     die("bad request");
 }
@@ -107,6 +110,23 @@ function logout () {
         echo("NO LOGIN FOUND");
     }
     return;
+}
+
+function isDupeUser ($usr) {
+    $conn = conn();
+    $table = "fp_users";
+    $sql = "SELECT COUNT(*) FROM $table WHERE username = \"$usr\"";
+    $result = mysqli_query($conn, $sql);
+    $row = $result->fetch_row();
+    if ($row[0] > 0) {
+        echo "USER EXISTS";
+    } else {
+        echo "VALID";
+    }
+    $result->free();
+    $conn->close();
+    return;
+
 }
 
 

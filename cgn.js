@@ -27,12 +27,8 @@ $(document).ready(function () {
                                     if (pass.match(/[A-Z]/)) {
                                         if (pass.match(/[0-9]/)) {
 
-                                            // Send User Info for Processing
-                                            $("#dismiss_regis").click();
-                                            $("#resetSignin").click();
-                                            $("#resetLogin").click();
-                                            var params = "username="+encodeURI(username)+"&password="+encodeURI(pass)+"&c_password="+encodeURI(pass_repeat)+"&request=register";
-                                            requestUser(params);
+                                            // AJAX check for duplicate username
+                                            checkDupeUser(username, pass, pass_repeat);
                                             return;
 
                                         } else {formAlert = ("Password must have at least one number");}
@@ -167,6 +163,48 @@ $(document).ready(function () {
     }
 
 
+    function checkDupeUser(username, pass, pass_repeat) {
+        var xhr;
+        if (window.ActiveXObject) {
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        else {
+            xhr = new XMLHttpRequest();
+        }
+
+        var params = "username="+encodeURI(username)+"&request=checkuser";
+        var url = "login-register.php";
+
+        xhr.open("POST", url, true);
+
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.setRequestHeader("Content-length", params.length);
+        xhr.setRequestHeader("Connection", "close");
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                var validate = xhr.responseText;
+
+                if (validate == "VALID" ) {
+                    // Send User Info for Processing
+                    var params = "username="+encodeURI(username)+"&password="+encodeURI(pass)+"&c_password="+encodeURI(pass_repeat)+"&request=register";
+                    requestUser(params);
+                    $("#dismiss_regis").click();
+                    $("#resetSignin").click();
+                    $("#resetLogin").click();
+                    return;
+                } else {
+                    formAlert = ("Sorry, that username's been taken!");
+                    $("#advisor").html('<div class="alert alert-danger">'+formAlert+'</div>')
+                }
+            }
+            else if (xhr.readyState == 4) {
+                alert ("ERROR: Status is " + xhr.status);
+            }
+        };
+        xhr.send(params);
+
+    }
 
 
 
