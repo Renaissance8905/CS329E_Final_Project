@@ -76,10 +76,10 @@ function login ($usr, $pass) {
         echo ($profile);
 
     } elseif (!mysqli_query($conn, $result)) {
-        echo ("ERROR: " . mysqli_error($conn)) . " :: " . mysqli_errno($conn);
+        echo("INVALID");
         return;
     } else {
-        echo "login failed";
+        echo ("ERROR: " . mysqli_error($conn)) . " :: " . mysqli_errno($conn);
         return;
     }
 

@@ -53,14 +53,66 @@ $(document).ready(function () {
         var usr = logForm.username.value;
         var pass = logForm.pass.value;
 
+
+        var xhr;
+        if (window.ActiveXObject) {
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        else {
+            xhr = new XMLHttpRequest();
+        }
+
+        var url = "login-register.php";
         var params = "username="+encodeURI(usr)+"&password="+encodeURI(pass)+"&request=login";
 
-        requestUser(params);
 
-        $("#dismiss_regis").click();
-        $("#resetSignin").click();
-        $("#resetLogin").click();
+        xhr.open("POST", url, true);
 
+        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhr.setRequestHeader("Content-length", params.length);
+        xhr.setRequestHeader("Connection", "close");
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+
+                var resp = xhr.responseText;
+
+                if (resp != "INVALID") {
+
+                    var userInfo = JSON.parse(resp);
+
+                    var usrnm = userInfo["username"];
+                    var days_active = userInfo["days_active"];
+                    var games_played = userInfo["games_played"];
+                    var contact = userInfo["contact"];
+
+                    $("#loginadvisor").html('<div class="alert alert-success">Welcome back, '+usrnm+'!</div>');
+
+
+                    $("#regisButton").hide();
+                    $("#profileButton").show();
+
+
+                    $("#username_header").text(usrnm);
+                    $("#games_played").text(games_played);
+                    $("#days_active").text(days_active);
+                    $("#contact_info").text(contact);
+
+                    setTimeout(function() {$("#dismiss_regis").click();}, 1000);
+                    $("#resetSignin").click();
+                    $("#resetLogin").click();
+
+                } else {
+
+                    $("#loginadvisor").html('<div class="alert alert-danger">Username Not Found</div>');
+                }
+
+            }
+            else if (xhr.readyState == 4) {
+                alert("ERROR: Status is " + xhr.status);
+            }
+        };
+        xhr.send(params);
 
     });
 
@@ -186,13 +238,13 @@ $(document).ready(function () {
                 var validate = xhr.responseText;
 
                 if (validate == "VALID" ) {
+
                     // Send User Info for Processing
                     var params = "username="+encodeURI(username)+"&password="+encodeURI(pass)+"&c_password="+encodeURI(pass_repeat)+"&request=register";
                     requestUser(params);
-                    $("#dismiss_regis").click();
+                    setTimeout(function() {$("#dismiss_regis").click();}, 1000);
                     $("#resetSignin").click();
                     $("#resetLogin").click();
-                    return;
                 } else {
                     formAlert = ("Sorry, that username's been taken!");
                     $("#advisor").html('<div class="alert alert-danger">'+formAlert+'</div>')
@@ -203,6 +255,7 @@ $(document).ready(function () {
             }
         };
         xhr.send(params);
+
 
     }
 
