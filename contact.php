@@ -360,7 +360,7 @@ function contact(){
       if (names.length != 0){
           if (subject.length != 0){
               if (comments.length != 0){
-                  if (email.match(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)){
+                  if (email.match(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/)){
                       return;
                   }else {formAlert = ("Enter a valid email address");}
               }else{formAlert = ("Message cannot be empty");}
