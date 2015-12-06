@@ -9,7 +9,10 @@
     font-size:4rem;
     
 }
-
+#contactimg{
+    width: 100%;
+    height: 100%;
+}
 
 .col-sm-6{
     width:100%;

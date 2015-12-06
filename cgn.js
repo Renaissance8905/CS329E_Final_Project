@@ -4,8 +4,6 @@
 
 
 
-
-
 $(document).ready(function () {
 
     requestUser("request=checklogin");
@@ -45,6 +43,21 @@ $(document).ready(function () {
 
     });
 
+     $("#loginButton").click(function  () {
+         var formAlert;
+        var fields = document.getElementById("loginForm");
+        var username = fields.username.value;
+        var pass = fields.pass.value;
+         if (username != ""){
+             if (pass != ""){
+                 return true;
+             } else{
+                formAlert = ("Please enter Password");}
+            
+             
+         } else{formAlert = ("Please enter Username");}
+          $("#advisors").html('<div class="alert alert-danger">'+formAlert+'</div>')
+     });
 
     // When Log-In Request is made. No client-side validation necessary
     $("#loginButton").click(function () {
@@ -92,7 +105,7 @@ $(document).ready(function () {
 
                     $("#regisButton").show();
                     $("#profileButton").hide();
-
+               
 
                     $("#username_header").text("");
                     $("#games_played").text("");
@@ -140,7 +153,7 @@ $(document).ready(function () {
 
                     $("#regisButton").hide();
                     $("#profileButton").show();
-
+                   
                     var userInfo = JSON.parse(resp);
 
                     var usrnm = userInfo["username"];
