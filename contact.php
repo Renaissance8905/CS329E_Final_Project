@@ -5,16 +5,20 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+   <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="cgn.js"></script>
+    <script type="text/javascript" src="regi.js"></script>
 
+
+    <link rel="stylesheet" href="regisPopover.css">
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,34 +31,26 @@
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/main.js"></script>
     <title>Gaming World</title>
-
+    
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
     <link href="css/price-range.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
-
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
-
     <link rel="shortcut icon" href="images/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 
-    <script type="text/javascript" src="regi.js"></script>
-    <link rel="stylesheet" href="regisPopover.css">
-    <script type="text/javascript" src="cgn.js"></script>
-
-
 </head>
-
 <body>
-    <header id="header">
+     <header id="header">
         <!--header-->
         <div class="header_top">
             <!--header_top-->
@@ -270,98 +266,113 @@
         <!--/header-bottom-->
     </header>
     <!--/header-->
+    
+<?php   
+    if (isset($_POST['submit'])){
+        thanks();
+    }
+            else{
+                contact();
+            }
+function thanks(){
+    print <<<PAGE1
+    <div id="contact-page" class="container">
+          <h2>Thank you for contact us!</h2>
+          </div>
+PAGE1;
+};
+function contact(){
+    if($_SERVER['REQUEST_METHOD'] == 'POST' ){
+        require_once("dbconn.php");
+        $name = $_POST["name"];
+        $subject = $_POST['subject'];
+        $comments = $_POST['comments'];
+        $email = $_POST['email'];
+        $table = "fp_contact";
 
+    $conn = conn();
 
-
-    <section id="slider">
-        <!--slider-->
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div id="slider-carousel" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#slider-carousel" data-slide-to="1"></li>
-                            <li data-target="#slider-carousel" data-slide-to="2"></li>
-                            <li data-target="#slider-carousel" data-slide-to="3"></li>
-                            <li data-target="#slider-carousel" data-slide-to="4"></li>
-                        </ol>
-
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <div class="col-sm-6">
-                                    <h1>Bloodborne</h1>
-                                    <h2>The Game Award 2015 </h2>
-                                    <h3>Game of Year</h3>
-
-                                </div>
-                                <div class="col-sm-6">
-                                    <img src="images/home/blood.jpg" class="img" alt="" />
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="col-sm-6">
-                                    <h1>Fallout 4</h1>
-                                    <h2>The Game Award 2015 </h2>
-                                    <h3>Game of Year</h3>
-                                </div>
-                                <div class="col-sm-6">
-                                    <img src="images/home/fallout.jpg" class="img" alt="" />
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <div class="col-sm-6">
-                                    <h1>Metal Gear Solid V: The Phantom Pain</h1>
-                                    <h2>The Game Award 2015 </h2>
-                                    <h3>Game of Year</h3>
-                                </div>
-                                <div class="col-sm-6">
-                                    <img src="images/home/metal.jpeg" class="img" alt="" />
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="col-sm-6">
-                                    <h1>Super Mario Maker</h1>
-                                    <h2>The Game Award 2015 </h2>
-                                    <h3>Game of Year</h3>
-
-
-                                </div>
-                                <div class="col-sm-6">
-                                    <img src="images/home/mario.jpg" class="img" alt="" />
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="col-sm-6">
-                                    <h1>The Witcher 3: Wild Hunt</h1>
-                                    <h2>The Game Award 2015 </h2>
-                                    <h3>Game of Year</h3>
-
-                                </div>
-                                <div class="col-sm-6">
-                                    <img src="images/home/witcher.jpg" class="img" alt="" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
-                            <i class="fa fa-angle-left"></i>
-                        </a>
-                        <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--/slider-->
-
-
-
-    <footer id="footer">
+    $stmt = mysqli_prepare($conn, "INSERT INTO $table VALUES (?,?,?,?)");
+    mysqli_stmt_bind_param($stmt, 'ssss', $name, $subject,$comments,$email);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    mysqli_close($conn);
+        
+    }
+   print<<<PAGE
+   <div id="contact-page" class="container">
+    	<div class="bg">
+	    	<div class="row">    		
+	    		<div class="col-sm-12">    			   			
+					<h2 class="title text-center">Contact <strong>Us</strong></h2>    			    				    				
+					<div id="gmap" class="contact-map">
+                    <img id = "contactimg" src ="feedback.jpg" alt =""/>
+					</div>
+				</div>			 		
+			</div>    	
+    		<div class="row">  	
+	    		<div class="col-sm-8">
+	    			<div class="contact-form">
+	    				<h2 class="title text-center">Feedback</h2>
+	    				<div class="status alert alert-success" style="display: none"></div>
+				    	<form id="contactform" class="contact-form row" name="contact-form" method="post">
+				            <div class="form-group col-md-6">
+				                <input type="text" name="name" class="form-control" required="required" placeholder="Name">
+				            </div>
+				            <div class="form-group col-md-6">
+				                <input type="email" name="email" class="form-control" required="required" placeholder="Email">
+				            </div>
+				            <div class="form-group col-md-12">
+				                <input type="text" name="subject" class="form-control" required="required" placeholder="Subject">
+				            </div>
+				            <div class="form-group col-md-12">
+				                <textarea name="comments" id="comments" required="required" class="form-control" rows="8" placeholder="Your Message Here"></textarea>
+				            <div><span id="advisor"></span></div>                       
+				            <div class="form-group col-md-12">
+				                <input type="submit" name="submit" class="btn btn-primary pull-right" value="Submit">
+				            </div>
+				        </form>
+	    			</div>
+	    		</div>
+	    		<div class="col-sm-4">
+	    			<div class="contact-info">
+	    				<h2 class="title text-center">Contact Info</h2>
+	    				<address>
+	    					<p>Ke Chen</p>
+							<p>ckckchen1208@gmail.com</p>
+							<p>Chris Spradling</p>
+							<p>cjspradling@gmail.com</p>
+	    				</address>
+	    				
+	    			</div>
+    			</div>    			
+	    	</div>  
+    	</div>	
+    </div><!--/#contact-page-->
+    <script type = "text/javascript">
+      $(document).ready(function () {
+       var formAlert;
+       var fields = document.getElementById("contactform");
+       var names = fields.name.value;
+       var email = fields.email.value;
+       var subject = fields.subject.value;
+      var comments = fields.comments.value;
+      if (names.length != 0){
+          if (subject.length != 0){
+              if (comments.length != 0){
+                  if (email.match(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/)){
+                      return;
+                  }else {formAlert = ("Enter a valid email address");}
+              }else{formAlert = ("Message cannot be empty");}
+          }else{formAlert = ("Subject cannot be empty");}
+      }else{formAlert = ("Name cannot be empty");}
+    $("#advisor").html('<div class="alert alert-danger">'+formAlert+'</div>')
+      });
+</script>
+PAGE;
+}
+?>
+  <footer id="footer">
         <!--Footer-->
         <div class="footer-widget">
             <div class="container">
@@ -383,9 +394,7 @@
                             <h2>Game</h2>
                             <ul class="nav nav-pills nav-stacked">
                                              <li><a href="playstation.html">PLAYSTATION</a>
-                                
                                           <li><a href="xbox.html">XBOX</a></li>
-                                    
                                 <li><a href="nintendo.html">Nintendo</a></li>                                 
                                              <li><a href="pc.html">PC</a></li>
 
@@ -418,7 +427,6 @@
         </div>
 
     </footer>
-    <!--/Footer-->
 
 
 

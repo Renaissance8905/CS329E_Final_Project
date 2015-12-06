@@ -6,7 +6,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
-    <!-- Latest compiled and minified CSS -->
+   <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
     <!-- Optional theme -->
@@ -27,7 +27,7 @@
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/main.js"></script>
     <title>Gaming World</title>
-
+    
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
     <link href="css/price-range.css" rel="stylesheet">
@@ -53,7 +53,7 @@
 
 </head>
 
-<body>
+    <body>
     <header id="header">
         <!--header-->
         <div class="header_top">
@@ -93,14 +93,14 @@
                         </div>
 
                     </div>
-                    <h1 id="title">Central Gaming Network</h1>
+                    <h1 id ="title">Central Gaming Network</h1>
                     <div class="col-sm-8">
 
                         <div class="shop-menu pull-right">
 
                             <ul class="nav navbar-nav">
-                                <span id="regisButton"><li><a href="#regis" role="button" class="link" data-toggle="modal"><i class="fa fa-lock"></i>Login</a></li></span>
-                                <span id="profileButton" hidden="hidden"><li><a href="#profile" role="button" class="link" data-toggle="modal">My Account</a></li></span>
+                                <span  id="regisButton"><li><a href="#regis" role="button" class="link" data-toggle="modal"><i class="fa fa-lock"></i>Login</a></li></span>
+                                <span  id="profileButton" hidden="hidden"><li><a href="#profile" role="button" class="link" data-toggle="modal">My Account</a></li></span>
 
                             </ul>
                         </div>
@@ -113,100 +113,76 @@
 
 
 
-        <!--------------- BEGIN REGISTRATION POPOVER MODAL ------------------>
-        <div id="regis" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="windowTitleLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" id="dismiss_regis" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="tabbable">
-                            <ul class="nav nav-tabs">
-                                <li class="active"><a href="#registration" data-toggle="tab">Register</a></li>
-                                <li><a href="#signin" data-toggle="tab">Log In</a></li>
-                            </ul>
-                            <div class="tab-content">
-                                <div id="registration" class="tab-pane fade active in">
-                                    <form id="regForm" action="" method="POST">
-                                        <table id="registerTab" class="signinup center">
-                                            <tr>
-                                                <td>
-                                                    <label for="reg_user">Username:</label>
-                                                </td>
-                                                <td>
-                                                    <input name="username" id="reg_user" type="text" value="" />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <label for="reg_pass">Password:</label>
-                                                </td>
-                                                <td>
-                                                    <input name="pass" id="reg_pass" type="password" value="" />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <label for="reg_pass_repeat">Confirm Password:</label>
-                                                </td>
-                                                <td>
-                                                    <input name="pass_repeat" id="reg_pass_repeat" type="password" value="" />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2"><span id="advisor"></span></td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2">
-                                                    <input type="button" class="btn btn-primary btn-block loginb" id="regButton" value="Register" />
-                                                </td>
-                                            </tr>
-                                            <input type="reset" id="resetSignin" hidden="hidden" />
-                                        </table>
-                                    </form>
-                                </div>
-
-
-                                <div id="signin" class="tab-pane fade">
-                                    <form id="loginForm" action="" method="POST">
-                                        <table id="loginTab" class="signinup center">
-                                            <tr>
-                                                <td>
-                                                    <label for="login_user">Username:</label>
-                                                </td>
-                                                <td>
-                                                    <input name="username" id="login_user" type="text" value="" />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <label for="login_pass">Password:</label>
-                                                </td>
-                                                <td>
-                                                    <input name="pass" id="login_pass" type="password" value="" />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                            <td colspan="2"><span id="advisors"></span></td>
+<!--------------- BEGIN REGISTRATION POPOVER MODAL ------------------>
+   <div id="regis" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="windowTitleLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" id="dismiss_regis" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="tabbable">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#registration" data-toggle="tab">Register</a></li>
+                            <li><a href="#signin" data-toggle="tab">Log In</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id ="registration" class="tab-pane fade active in">
+                                <form id="regForm" action="" method="POST">
+                                    <table id="registerTab" class="signinup center">
+                                        <tr>
+                                            <td><label for="reg_user">Username:</label></td>
+                                            <td><input name="username" id="reg_user" type="text" value="" /></td>
                                         </tr>
-                                            <tr>
-                                                <td colspan="2">
-                                                    <input type="button" class="btn btn-primary btn-block loginb" id="loginButton" value="Log In" />
-                                                </td>
-                                            </tr>
-                                            <input type="reset" id="resetLogin" hidden="hidden" />
-                                        </table>
-                                    </form>
-                                </div>
+                                        <tr>
+                                            <td><label for="reg_pass">Password:</label></td>
+                                            <td><input name="pass" id="reg_pass" type="password" value="" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="reg_pass_repeat">Confirm Password:</label></td>
+                                            <td><input name="pass_repeat" id="reg_pass_repeat" type="password" value="" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2"><span id="advisor"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2"><input type="button" class="btn btn-primary btn-block loginb" id="regButton" value="Register" /></td>
+                                        </tr>
+                                        <input type="reset" id="resetSignin" hidden="hidden" />
+                                    </table>
+                                </form>
+                            </div>
+
+
+                            <div id="signin" class="tab-pane fade">
+                                <form id="loginForm" action="" method="POST">
+                                    <table id="loginTab" class="signinup center">
+                                        <tr>
+                                            <td><label for="login_user">Username:</label></td>
+                                            <td><input name="username" id="login_user" type="text" value="" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td><label for="login_pass">Password:</label></td>
+                                            <td><input name="pass" id="login_pass" type="password" value="" /></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2"><span id="loginadvisor"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2"><input type="button" class="btn btn-primary btn-block loginb" id="loginButton" value="Log In" /></td>
+                                        </tr>
+                                        <input type="reset" id="resetLogin" hidden="hidden" />
+                                    </table>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--------------- END REGISTRATION POPOVER MODAL ------------------>
-        <!--------------- BEGIN USER PROFILE POPOVER MODAL ------------------>
+    </div>
+<!--------------- END REGISTRATION POPOVER MODAL ------------------>
+<!--------------- BEGIN USER PROFILE POPOVER MODAL ------------------>
 
         <div id="profile" class="modal fade" tabindex="-1" role="dialog">
             <div class="modal-dialog">
@@ -228,12 +204,12 @@
                 </div>
             </div>
         </div>
-        <!--------------- END USER PROFILE POPOVER MODAL ------------------>
+<!--------------- END USER PROFILE POPOVER MODAL ------------------>
 
 
 
 
-        <div class="header-bottom">
+<div class="header-bottom">
             <!--header-bottom-->
             <div class="container">
                 <div class="row">
@@ -251,17 +227,17 @@
                                 <li><a href="index.html" class="active">Home</a></li>
                                 <li class="dropdown"><a href="#">Game<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                      <li><a href="playstation.html">PLAYSTATION</a>
-                                
-                                          <li><a href="xbox.html">XBOX</a></li>
-                                    
-                                <li><a href="nintendo.html">Nintendo</a></li>                                 
-                                             <li><a href="pc.html">PC</a></li>
+                                        <li><a href="#">PLAYSTATION</a></li>
+                                        <li><a href="#">Microsoft XBOX</a></li>
+                                        <li><a href="#">Nintendo</a></li>
+                                        <li><a href="#">PC</a></li>
+                                        <li><a href="#">Login</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact-us.html">Contact</a></li>
 
                             </ul>
-                             <li><a href="contact.php">Contact</a></li>
                         </div>
-                       
                     </div>
 
                 </div>
@@ -382,12 +358,10 @@
                         <div class="single-widget">
                             <h2>Game</h2>
                             <ul class="nav nav-pills nav-stacked">
-                                             <li><a href="playstation.html">PLAYSTATION</a>
-                                
-                                          <li><a href="xbox.html">XBOX</a></li>
-                                    
-                                <li><a href="nintendo.html">Nintendo</a></li>                                 
-                                             <li><a href="pc.html">PC</a></li>
+                                <li><a href="#">Playstation</a></li>
+                                <li><a href="#">Xbox</a></li>
+                                <li><a href="#">Nintendo</a></li>
+                                <li><a href="#">PC</a></li>
 
                             </ul>
                         </div>
@@ -396,8 +370,10 @@
                         <div class="single-widget">
                             <h2>More</h2>
                             <ul class="nav nav-pills nav-stacked">
-                                <li><a href="about.html">About us</a></li>
-                                <li><a href="contact.php">Contact US</a></li>
+                                <li><a href="#">About us</a></li>
+                                <li><a href="#">Contact US</a></li>
+                                <li><a href="#">Site Map</a></li>
+
                             </ul>
                         </div>
                     </div>
@@ -426,3 +402,6 @@
 </body>
 
 </html>
+
+
+
