@@ -1451,13 +1451,7 @@ h2.title {
   overflow: hidden;
 }
 
-.login-form {
 
-}
-
-.signup-form {
-
-}
 
 .login-form h2, .signup-form h2 {
   color: #696763;
@@ -1521,17 +1515,31 @@ h2.title {
   outline: medium none;
   padding-left: 0;
 }
-
+.aboutt{
+    padding:100px;
+}
+.aboutt th{
+    text-align: center;
+}
+.aboutt td{
+   text-align:center;
+    padding: 10px;
+    padding-right:30px;
+    
+    
+}
 
 .or{
 	background: #FE980F;
-	border-radius: 40px;
+	border-radius: 50px;
 	color: #FFFFFF;
 	font-family: 'Roboto', sans-serif;
 	font-size: 16px;
 	height: 50px;
 	line-height: 50px;
-	margin-top: 75px;
+	margin-top: 90px;
+    margin-left:20px;
+    margin-right:20px;
 	text-align: center;
 	width: 50px;
 }
