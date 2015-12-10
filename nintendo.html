@@ -2,19 +2,13 @@
 <html lang="en">
 
 <head>
-
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,7 +20,6 @@
     <script src="js/price-range.js"></script>
     <script src="js/jquery.prettyPhoto.js"></script>
     <script src="js/main.js"></script>
-    <title>Gaming World</title>
 
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/prettyPhoto.css" rel="stylesheet">
@@ -46,255 +39,231 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
 
+
     <script type="text/javascript" src="regi.js"></script>
     <link rel="stylesheet" href="regisPopover.css">
     <script type="text/javascript" src="cgn.js"></script>
 
 
+    <title>Gaming World</title>
 </head>
 
 <body>
-    <header id="header">
-        <!--header-->
-        <div class="header_top">
-            <!--header_top-->
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="contactinfo">
-                            <ul class="nav nav-pills">
-
-                            </ul>
-                        </div>
+<header id="header">
+    <div class="header-middle">
+        <!--header-middle-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="logo pull-left">
+                        <a href="index.html"><img src="images/home/logo.png" alt="" /></a>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="social-icons pull-right">
-                            <ul class="nav navbar-nav">
-
-                            </ul>
+                </div>
+                <h1 id="title">Central Gaming Network</h1>
+                <div class="col-sm-8">
+                    <div class="shop-menu pull-right">
+                        <div class="nav navbar-nav">
+                                <span id="regisButton">
+                                    <li><a href="#regis" role="button" class="link" data-toggle="modal"><i class="fa fa-lock"></i>Login</a></li>
+                                </span>
+                                <span id="profileButton" hidden="hidden">
+                                    <li><a href="#profile" role="button" class="link" data-toggle="modal">My Account</a></li>
+                                </span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--/header_top-->
-
-        <div class="header-middle">
-            <!--header-middle-->
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="logo pull-left">
-                            <a href="index.html"><img src="images/home/logo.png" alt="" /></a>
-                        </div>
-                        <div class="btn-group pull-right">
-
-
-                        </div>
-
+    </div>
+    <!--/header-middle-->
+    <!--header-bottom-->
+    <div class="header-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
                     </div>
-                    <h1 id="title">Central Gaming Network</h1>
-                    <div class="col-sm-8">
-
-                        <div class="shop-menu pull-right">
-
-                            <ul class="nav navbar-nav">
-                                <span id="regisButton"><li><a href="#regis" role="button" class="link" data-toggle="modal"><i class="fa fa-lock"></i>Login</a></li></span>
-                                <span id="profileButton" hidden="hidden"><li><a href="#profile" role="button" class="link" data-toggle="modal">My Account</a></li></span>
-
-                            </ul>
-                        </div>
+                    <div class="mainmenu pull-left">
+                        <ul class="nav navbar-nav collapse navbar-collapse">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="dropdown"><a href="index.html" class="active">Games<i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <li><a href="playstation.html">PLAYSTATION</a></li>
+                                    <li><a href="xbox.html">XBOX</a></li>
+                                    <li><a href="nintendo.html">NINTENDO</a></li>
+                                    <li><a href="pc.html">PC</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.php">Contact</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <!--/header-middle-->
-
-
-
-
-  <!--------------- BEGIN REGISTRATION POPOVER MODAL ------------------>
-        <div id="regis" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="windowTitleLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" id="dismiss_regis" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="tabbable">
-                            <ul class="nav nav-tabs">
-                                <li class="active"><a href="#registration" data-toggle="tab">Register</a></li>
-                                <li><a href="#signin" data-toggle="tab">Log In</a></li>
-                            </ul>
-                            <div class="tab-content">
-                                <div id="registration" class="tab-pane fade active in">
-                                    <form id="regForm" action="" method="POST">
-                                        <table id="registerTab" class="signinup center">
-                                            <tr>
-                                                <td>
-                                                  <span class="glyphicon glyphicon-user"></span> <label for="reg_user">Username:</label>
-                                                </td>
-                                                <td>
-                                                    <input name="username" id="reg_user" type="text" value="" />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                   <span class="glyphicon glyphicon-lock"></span> <label for="reg_pass">Password:</label>
-                                                </td>
-                                                <td>
-                                                    <input name="pass" id="reg_pass" type="password" value="" />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <label for="reg_pass_repeat">Confirm Password:</label>
-                                                </td>
-                                                <td>
-                                                    <input name="pass_repeat" id="reg_pass_repeat" type="password" value="" />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2"><span id="advisor"></span></td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2">
-                                                    <input type="button" class="btn btn-primary btn-block loginb" id="regButton" value="Register" />
-                                                </td>
-                                            </tr>
-                                            <input type="reset" id="resetSignin" hidden="hidden" />
-                                        </table>
-                                    </form>
-                                </div>
-
-
-                                <div id="signin" class="tab-pane fade">
-                                    <form id="loginForm" action="" method="POST">
-                                        <table id="loginTab" class="signinup center">
-                                            <tr>
-                                                <td>
-                                                    <span class="glyphicon glyphicon-user"></span><label for="login_user">Username:</label>
-                                                </td>
-                                                <td>
-                                                   <input name="username" id="login_user" type="text" value="" />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <span class="glyphicon glyphicon-lock"></span> <label for="login_pass">Password:</label>
-                                                </td>
-                                                <td>
-                                                    <input name="pass" id="login_pass" type="password" value="" />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                            <td colspan="2"><span id="advisors"></span></td>
+    </div>
+    <!--/header-bottom-->
+    <!--------------- BEGIN REGISTRATION POPOVER MODAL ------------------>
+    <div id="regis" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="windowTitleLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" id="dismiss_regis" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="tabbable">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#registration" data-toggle="tab">Register</a></li>
+                            <li><a href="#signin" data-toggle="tab">Log In</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="registration" class="tab-pane fade active in">
+                                <form id="regForm" action="" method="POST">
+                                    <table id="registerTab" class="signinup center">
+                                        <tr>
+                                            <td>
+                                                <label for="reg_user"><span class="glyphicon glyphicon-user"></span> Username:</label>
+                                            </td>
+                                            <td>
+                                                <input name="username" id="reg_user" type="text" value="" />
+                                            </td>
                                         </tr>
-                                            <tr>
-                                                <td colspan="2">
-                                                    <input type="button" class="btn btn-primary btn-block loginb" id="loginButton" value="Log In" />
-                                                </td>
-                                            </tr>
-                                            <input type="reset" id="resetLogin" hidden="hidden" />
-                                        </table>
-                                    </form>
-                                </div>
+                                        <tr>
+                                            <td>
+                                                <label for="reg_pass"><span class="glyphicon glyphicon-lock"></span> Password:</label>
+                                            </td>
+                                            <td>
+                                                <input name="pass" id="reg_pass" type="password" value="" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="reg_pass_repeat"><span class="glyphicon glyphicon-lock"></span> Confirm Password:</label>
+                                            </td>
+                                            <td>
+                                                <input name="pass_repeat" id="reg_pass_repeat" type="password" value="" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="email_addr"><span class="glyphicon glyphicon-envelope"></span> Email Address:(Optional)</label>
+                                            </td>
+                                            <td>
+                                                <input name="email" id="email_addr" type="email" value="" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2"><span id="regadvisor"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <input type="button" class="btn btn-primary btn-block loginb" id="regButton" value="Register" />
+                                                <input type="reset" id="resetSignin" hidden="hidden" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </div>
+
+
+                            <div id="signin" class="tab-pane fade">
+                                <form id="loginForm" action="" method="POST">
+                                    <table id="loginTab" class="signinup center">
+                                        <tr>
+                                            <td>
+                                                <label for="login_user"><span class="glyphicon glyphicon-user"></span> Username:</label>
+                                            </td>
+                                            <td>
+                                                <input name="username" id="login_user" type="text" value="" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="login_pass"><span class="glyphicon glyphicon-lock"></span> Password:</label>
+                                            </td>
+                                            <td>
+                                                <input name="pass" id="login_pass" type="password" value="" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2"><span id="loginadvisor"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <input type="button" class="btn btn-primary btn-block loginb" id="loginButton" value="Log In" />
+                                                <input type="reset" id="resetLogin" hidden="hidden" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--------------- END REGISTRATION POPOVER MODAL ------------------>
-        <!--------------- BEGIN USER PROFILE POPOVER MODAL ------------------>
-
-        <div id="profile" class="modal fade" tabindex="-1" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="username_header">USER'S NAME HERE</h4>
-                    </div>
-                    <div class="modal-body">
-
-                        <h4>Games Played: <span id="games_played"></span></h4>
-                        <h4>Days Active: <span id="days_active"></span></h4>
-                        <h4>Contact Info: <span id="contact_info"></span></h4>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button id="logoutButton" type="button" class="btn btn-danger" data-dismiss="modal">Log Out</button>
-                    </div>
+    </div>
+    <!--------------- END REGISTRATION POPOVER MODAL ------------------>
+    <!--------------- BEGIN USER PROFILE POPOVER MODAL ---------------->
+    <div id="profile" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="username_header"></h4>
+                </div>
+                <div class="modal-body">
+                    <h4>Games Played: <span id="games_played"></span></h4>
+                    <h4>Days Active: <span id="days_active"></span></h4>
+                    <h4>Contact Info: <span id="contact_info"></span></h4>
+                </div>
+                <div class="modal-footer">
+                    <button id="logoutButton" type="button" class="btn btn-danger" data-dismiss="modal">Log Out</button>
                 </div>
             </div>
         </div>
-        <!--------------- END USER PROFILE POPOVER MODAL ------------------>
+    </div>
+    <!--------------- END USER PROFILE POPOVER MODAL ------------------>
+</header>
+<!--/header-->
 
 
 
+<!--------------------------------------------- MAIN MAIN MAIN --------------------------------------------->
+<!--------------------------------------------- MAIN MAIN MAIN --------------------------------------------->
+<!--------------------------------------------- MAIN MAIN MAIN --------------------------------------------->
 
-        <div class="header-bottom">
-            <!--header-bottom-->
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-9">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                        </div>
-                        <div class="mainmenu pull-left">
-                            <ul class="nav navbar-nav collapse navbar-collapse">
-                                <li><a href="index.html" class="active">Home</a></li>
-                                <li class="dropdown"><a href="#">Game<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="playstation.html">PLAYSTATION</a></li>
-                                        <li><a href="xbox.html">XBOX</a></li>
-                                        <li><a href="nintendo.html">Nintendo</a></li>
-                                        <li><a href="pc.html">PC</a></li>
-                                        
-                                    </ul>
-            </li>
-                                <li><a href="contact.php">Contact</a></li>
-                            </ul>
-                            
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <!--/header-bottom-->
-    </header>
-    <!--/header-->
 
 <div id="contact-page" class="container">
     	<div class="bg">
-	    	<div class="row">    		
-	    		<div class="col-sm-12">    			   			
+	    	<div class="row">
+	    		<div class="col-sm-12">
 					<h2 class="title text-center"><strong>Nintendo Games</strong></h2>    			    				    				<div id="gmap" class="contact-map">
                 <img id = "contactimg" src ="nintendo.jpg" alt =""/>
 					</div>
 					<div class="blog-post-area">
 						<h2 class="title text-center">Top Games</h2>
 						<div class="single-blog-post">
-						
+
 							<h3>Super Mario Maker</h3>
 							<div class="post-meta">
 								<ul>
-								
+
 									<li><i class="fa fa-calendar"></i> Sep 11, 2015</li>
 									<li><i class="fa fa-tags"></i> Wii U, Level editor, platform</li>
 									<li><i class="fa fa-thumbs-o-up"></i>88/8.7</li>
 									<li><i class="fa fa-trophy"></i></li>
 									<li><i class="fa fa-video-camera"></i>1</li>
 									<li><i class="fa fa-camera"></i></li>
-									
+
 								</ul>
-								
+
 							</div>
 							<a href="maker.html">
 								<img src="makem.jpg" alt="">
@@ -303,13 +272,13 @@
 							<a  class="btn btn-primary" href="maker.html">Read More</a>
 						</div>
                         <hr>
-                
+                    </div>
                 </div>
-				</div>			 		
-			</div>  
-          </div></div>
+			</div>
+          </div>
+</div>
 
-    
+
 
 
 
