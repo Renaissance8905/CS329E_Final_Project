@@ -12,15 +12,23 @@ require_once("dbconn.php");
 $usr = $_POST["username"];
 $pass = $_POST["password"];
 $cpass = $_POST["c_password"];
+$email = $_POST["email"];
 $usr = sanitize($usr);
 $pass = sanitize($pass);
 $pass = md5($pass);
 $cpass = md5($cpass);
 
 
+/* I know, it's fake. We'll send a DLC patch later */
+$games_played = rand(0, 100);
+
+/* This works though! */
+$register_moment = time();
+
+
 
 if ($_POST["request"] == "register" && isset($_POST["username"])) {
-    register($usr, $pass, $cpass);
+    register($usr, $pass, $cpass, $email, $register_moment, $games_played);
 }
 elseif ($_POST["request"] == "login" && isset($_POST["username"])) {
     login($usr, $pass);
@@ -40,7 +48,7 @@ else {
 
 
 
-function register ($usr, $pass, $cpass) {
+function register ($usr, $pass, $cpass, $email, $register_moment, $games) {
 
     if ($pass != $cpass) {
         die("Mismatched passwords");
@@ -50,8 +58,8 @@ function register ($usr, $pass, $cpass) {
 
     $conn = conn();
 
-    $stmt = mysqli_prepare($conn, "INSERT INTO $table (username, password) VALUES (?,?)");
-    mysqli_stmt_bind_param($stmt, 'ss', $usr, $pass);
+    $stmt = mysqli_prepare($conn, "INSERT INTO $table (username, password, user_since, contact, games_played) VALUES (?,?,?,?,?)");
+    mysqli_stmt_bind_param($stmt, 'ssisi', $usr, $pass, $register_moment, $email, $games);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
 
@@ -63,12 +71,12 @@ function login ($usr, $pass) {
     $conn = conn();
     $table = "fp_users";
 
-    $sql = "SELECT username, days_active, games_played, contact FROM $table WHERE username = \"$usr\" AND password = \"$pass\"";
+    $sql = "SELECT username, user_since, games_played, contact FROM $table WHERE username = \"$usr\" AND password = \"$pass\"";
     $result = mysqli_query($conn, $sql);
 
     if (mysqli_num_rows($result) > 0) {
         $row = $result->fetch_row();
-        $profile =  array("username"=>$row[0], "days_active"=>$row[1], "games_played"=>$row[2], "contact"=>$row[3]);
+        $profile =  array("username"=>$row[0], "days_active"=>days_since($row[1]), "games_played"=>$row[2], "contact"=>$row[3]);
         $profile = (json_encode($profile));
 
         setcookie('loggedIn', $profile, time()+(86400*7), '/'); // Active 7 Days
@@ -129,5 +137,10 @@ function isDupeUser ($usr) {
 
 }
 
+/* converts user start date to number of days ago that was, as int, rounded up */
+function days_since($moment) {
+    $now = time();
+    return ceil(($now - $moment) / (60*60*24));
+}
 
 ?>

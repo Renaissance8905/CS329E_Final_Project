@@ -15,6 +15,7 @@ $(document).ready(function () {
         var username = fields.username.value;
         var pass = fields.pass.value;
         var pass_repeat = fields.pass_repeat.value;
+        var eml = fields.email.value;
         if (username.length > 5 && username.length < 11) {
             if (username[0].match(/[a-z]/i)) {
                 if (~username.match(/^[a-z0-9]+$/i)) {
@@ -26,7 +27,7 @@ $(document).ready(function () {
                                         if (pass.match(/[0-9]/)) {
 
                                             // AJAX check for duplicate username
-                                            checkDupeUser(username, pass, pass_repeat);
+                                            checkDupeUser(username, pass, pass_repeat, eml);
                                             return;
 
                                         } else {formAlert = ("Password must have at least one number");}
@@ -228,7 +229,7 @@ $(document).ready(function () {
     }
 
 
-    function checkDupeUser(username, pass, pass_repeat) {
+    function checkDupeUser(username, pass, pass_repeat, eml) {
         var xhr;
         if (window.ActiveXObject) {
             xhr = new ActiveXObject("Microsoft.XMLHTTP");
@@ -253,7 +254,7 @@ $(document).ready(function () {
                 if (validate == "VALID" ) {
 
                     // Send User Info for Processing
-                    var params = "username="+encodeURI(username)+"&password="+encodeURI(pass)+"&c_password="+encodeURI(pass_repeat)+"&request=register";
+                    var params = "username="+encodeURI(username)+"&password="+encodeURI(pass)+"&c_password="+encodeURI(pass_repeat)+"&email="+encodeURI(eml)+"&request=register";
                     requestUser(params);
                     setTimeout(function() {$("#dismiss_regis").click();}, 1000);
                     $("#resetSignin").click();
