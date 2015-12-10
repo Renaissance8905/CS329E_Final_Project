@@ -39,94 +39,94 @@ $(document).ready(function () {
             } else {formAlert = ("Username must begin with a letter");}
         } else {formAlert = ("Username should be between 6 and 10 characters");}
 
-        $("#advisor").html('<div class="alert alert-danger">'+formAlert+'</div>')
+        $("#regadvisor").html('<div class="alert alert-danger">'+formAlert+'</div>')
 
     });
 
-     $("#loginButton").click(function  () {
-         var formAlert;
-        var fields = document.getElementById("loginForm");
-        var username = fields.username.value;
-        var pass = fields.pass.value;
-         if (username != ""){
-             if (pass != ""){
-                 return true;
-             } else{
-                formAlert = ("Please enter Password");}
-            
-             
-         } else{formAlert = ("Please enter Username");}
-          $("#advisors").html('<div class="alert alert-danger">'+formAlert+'</div>')
-     });
 
-    // When Log-In Request is made. No client-side validation necessary
+    // When Log-In Request is made.
     $("#loginButton").click(function () {
 
+        var formAlert;
         var logForm = document.getElementById("loginForm");
         var usr = logForm.username.value;
         var pass = logForm.pass.value;
 
 
-        var xhr;
-        if (window.ActiveXObject) {
-            xhr = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        else {
-            xhr = new XMLHttpRequest();
-        }
+        if (usr == "") {
+            formAlert = ("Please enter a username");
+            $("#loginadvisor").html('<div class="alert alert-warning">'+formAlert+'</div>');
+        } else if (pass == "") {
+            formAlert = ("Don't forget your password!");
+            $("#loginadvisor").html('<div class="alert alert-warning">'+formAlert+'</div>');
+        } else {
 
-        var url = "login-register.php";
-        var params = "username="+encodeURI(usr)+"&password="+encodeURI(pass)+"&request=login";
-
-
-        xhr.open("POST", url, true);
-
-        xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xhr.setRequestHeader("Content-length", params.length);
-        xhr.setRequestHeader("Connection", "close");
-
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState == 4 && xhr.status == 200) {
-
-                var resp = xhr.responseText;
-
-                if (resp != "INVALID") {
-
-                    var userInfo = JSON.parse(resp);
-
-                    var usrnm = userInfo["username"];
-                    var days_active = userInfo["days_active"];
-                    var games_played = userInfo["games_played"];
-                    var contact = userInfo["contact"];
-
-                    $("#loginadvisor").html('<div class="alert alert-success">Welcome back, '+usrnm+'!</div>');
+            // Passed client-side validation
+            $("#loginadvisor").html('<div class="alert">Checking...</div>');
 
 
-                    $("#regisButton").hide();
-                    $("#profileButton").show();
+            var xhr;
+            if (window.ActiveXObject) {
+                xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            else {
+                xhr = new XMLHttpRequest();
+            }
+
+            var url = "login-register.php";
+            var params = "username=" + encodeURI(usr) + "&password=" + encodeURI(pass) + "&request=login";
 
 
-                    $("#username_header").text(usrnm);
-                    $("#games_played").text(games_played);
-                    $("#days_active").text(days_active);
-                    $("#contact_info").text(contact);
+            xhr.open("POST", url, true);
 
-                    setTimeout(function() {$("#dismiss_regis").click();}, 1000);
-                    $("#resetSignin").click();
-                    $("#resetLogin").click();
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.setRequestHeader("Content-length", params.length);
+            xhr.setRequestHeader("Connection", "close");
 
-                } else {
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
 
-                    $("#loginadvisor").html('<div class="alert alert-danger">Username Not Found</div>');
+                    var resp = xhr.responseText;
+
+                    if (resp != "INVALID") {
+
+                        var userInfo = JSON.parse(resp);
+
+                        var usrnm = userInfo["username"];
+                        var days_active = userInfo["days_active"];
+                        var games_played = userInfo["games_played"];
+                        var contact = userInfo["contact"];
+
+                        $("#loginadvisor").html('<div class="alert alert-success">Welcome back, ' + usrnm + '!</div>');
+
+
+                        $("#regisButton").hide();
+                        $("#profileButton").show();
+
+
+                        $("#username_header").text(usrnm);
+                        $("#games_played").text(games_played);
+                        $("#days_active").text(days_active);
+                        $("#contact_info").text(contact);
+
+                        setTimeout(function () {
+                            $("#dismiss_regis").click();
+                        }, 1000);
+                        $("#resetSignin").click();
+                        $("#resetLogin").click();
+
+                    } else {
+
+                        $("#loginadvisor").html('<div class="alert alert-danger">Username Not Found</div>');
+                    }
+
                 }
-
-            }
-            else if (xhr.readyState == 4) {
-                alert("ERROR: Status is " + xhr.status);
-            }
-        };
-        xhr.send(params);
-
+                else if (xhr.readyState == 4) {
+                    alert("ERROR: Status is " + xhr.status);
+                }
+            };
+            xhr.send(params);
+        }
     });
 
 
@@ -260,7 +260,7 @@ $(document).ready(function () {
                     $("#resetLogin").click();
                 } else {
                     formAlert = ("Sorry, that username's been taken!");
-                    $("#advisor").html('<div class="alert alert-danger">'+formAlert+'</div>')
+                    $("#regadvisor").html('<div class="alert alert-danger">'+formAlert+'</div>')
                 }
             }
             else if (xhr.readyState == 4) {

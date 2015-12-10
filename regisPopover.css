@@ -71,8 +71,8 @@
 
 
 
-
-#registerTab tr:nth-child(4) td {
+/* Hold space for alerts in login and register panes */
+#registerTab tr:nth-child(5) td, #loginTab tr:nth-child(3) {
     margin-top: 10px;
     height: 140px;
     padding-top: 20px;

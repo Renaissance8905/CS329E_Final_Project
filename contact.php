@@ -346,6 +346,7 @@ function contact(){
 	    				<address>
 	    					<p>Ke Chen</p>
 							<p>ckckchen1208@gmail.com</p>
+							<br>
 							<p>Chris Spradling</p>
 							<p>cjspradling@gmail.com</p>
 	    				</address>
