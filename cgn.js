@@ -122,7 +122,7 @@ $(document).ready(function () {
                     }
 
                 }
-                else if (xhr.readyState == 4) {
+                //else if (xhr.readyState == 4) {
                     alert("ERROR: Status is " + xhr.status);
                 }
             };
@@ -169,7 +169,7 @@ $(document).ready(function () {
 
             }
             else if (xhr.readyState == 4) {
-                alert("ERROR: Status is " + xhr.status);
+                //alert("ERROR: Status is " + xhr.status);
             }
         };
         xhr.send(params);
@@ -222,7 +222,7 @@ $(document).ready(function () {
 
             }
             else if (xhr.readyState == 4) {
-                alert("ERROR: Status is " + xhr.status);
+                //alert("ERROR: Status is " + xhr.status);
             }
         };
         xhr.send(params);
@@ -265,7 +265,7 @@ $(document).ready(function () {
                 }
             }
             else if (xhr.readyState == 4) {
-                alert ("ERROR: Status is " + xhr.status);
+                //alert ("ERROR: Status is " + xhr.status);
             }
         };
         xhr.send(params);

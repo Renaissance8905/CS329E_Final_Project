@@ -54,298 +54,399 @@
 </head>
 
 <body>
-    <header id="header">
-        <!--header-->
-        <div class="header_top">
-            <!--header_top-->
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <div class="contactinfo">
-                            <ul class="nav nav-pills">
+<header id="header">
+    <!--header-->
+    <div class="header_top">
+        <!--header_top-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="contactinfo">
+                        <ul class="nav nav-pills">
 
-                            </ul>
-                        </div>
+                        </ul>
                     </div>
-                    <div class="col-sm-6">
-                        <div class="social-icons pull-right">
-                            <ul class="nav navbar-nav">
+                </div>
+                <div class="col-sm-6">
+                    <div class="social-icons pull-right">
+                        <ul class="nav navbar-nav">
 
-                            </ul>
-                        </div>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <!--/header_top-->
+    </div>
+    <!--/header_top-->
 
-        <div class="header-middle">
-            <!--header-middle-->
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="logo pull-left">
-                            <a href="index.html"><img src="images/home/logo.png" alt="" /></a>
-                        </div>
-                        <div class="btn-group pull-right">
+    <div class="header-middle">
+        <!--header-middle-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="logo pull-left">
+                        <a href="index.html"><img src="images/home/logo.png" alt="" /></a>
+                    </div>
+                    <div class="btn-group pull-right">
 
-
-                        </div>
 
                     </div>
-                    <h1 id="title">Central Gaming Network</h1>
-                    <div class="col-sm-8">
 
-                        <div class="shop-menu pull-right">
+                </div>
+                <h1 id="title">Central Gaming Network</h1>
+                <div class="col-sm-8">
 
-                            <ul class="nav navbar-nav">
-                                <span id="regisButton"><li><a href="#regis" role="button" class="link" data-toggle="modal"><i class="fa fa-lock"></i>Login</a></li></span>
-                                <span id="profileButton" hidden="hidden"><li><a href="#profile" role="button" class="link" data-toggle="modal">My Account</a></li></span>
+                    <div class="shop-menu pull-right">
 
-                            </ul>
-                        </div>
+                        <ul class="nav navbar-nav">
+                            <span id="regisButton"><li><a href="#regis" role="button" class="link" data-toggle="modal"><i class="fa fa-lock"></i>Login</a></li></span>
+                            <span id="profileButton" hidden="hidden"><li><a href="#profile" role="button" class="link" data-toggle="modal">My Account</a></li></span>
+
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <!--/header-middle-->
+    </div>
+    <!--/header-middle-->
 
 
 
 
     <!--------------- BEGIN REGISTRATION POPOVER MODAL ------------------>
-        <div id="regis" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="windowTitleLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" id="dismiss_regis" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="tabbable">
-                            <ul class="nav nav-tabs">
-                                <li class="active"><a href="#registration" data-toggle="tab">Register</a></li>
-                                <li><a href="#signin" data-toggle="tab">Log In</a></li>
-                            </ul>
-                            <div class="tab-content">
-                                <div id="registration" class="tab-pane fade active in">
-                                    <form id="regForm" action="" method="POST">
-                                        <table id="registerTab" class="signinup center">
-                                            <tr>
-                                                <td>
-                                                  <span class="glyphicon glyphicon-user"></span> <label for="reg_user">Username:</label>
-                                                </td>
-                                                <td>
-                                                    <input name="username" id="reg_user" type="text" value="" />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                   <span class="glyphicon glyphicon-lock"></span> <label for="reg_pass">Password:</label>
-                                                </td>
-                                                <td>
-                                                    <input name="pass" id="reg_pass" type="password" value="" />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <label for="reg_pass_repeat">Confirm Password:</label>
-                                                </td>
-                                                <td>
-                                                    <input name="pass_repeat" id="reg_pass_repeat" type="password" value="" />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2"><span id="advisor"></span></td>
-                                            </tr>
-                                            <tr>
-                                                <td colspan="2">
-                                                    <input type="button" class="btn btn-primary btn-block loginb" id="regButton" value="Register" />
-                                                </td>
-                                            </tr>
-                                            <input type="reset" id="resetSignin" hidden="hidden" />
-                                        </table>
-                                    </form>
-                                </div>
+    <div id="regis" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="windowTitleLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" id="dismiss_regis" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="tabbable">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#registration" data-toggle="tab">Register</a></li>
+                            <li><a href="#signin" data-toggle="tab">Log In</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="registration" class="tab-pane fade active in">
+                                <form id="regForm" action="" method="POST">
+                                    <table id="registerTab" class="signinup center">
+                                        <tr>
+                                            <td>
+                                                <span class="glyphicon glyphicon-user"></span> <label for="reg_user">Username:</label>
+                                            </td>
+                                            <td>
+                                                <input name="username" id="reg_user" type="text" value="" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="glyphicon glyphicon-lock"></span> <label for="reg_pass">Password:</label>
+                                            </td>
+                                            <td>
+                                                <input name="pass" id="reg_pass" type="password" value="" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="reg_pass_repeat">Confirm Password:</label>
+                                            </td>
+                                            <td>
+                                                <input name="pass_repeat" id="reg_pass_repeat" type="password" value="" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2"><span id="advisor"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <input type="button" class="btn btn-primary btn-block loginb" id="regButton" value="Register" />
+                                            </td>
+                                        </tr>
+                                        <input type="reset" id="resetSignin" hidden="hidden" />
+                                    </table>
+                                </form>
+                            </div>
 
 
-                                <div id="signin" class="tab-pane fade">
-                                    <form id="loginForm" action="" method="POST">
-                                        <table id="loginTab" class="signinup center">
-                                            <tr>
-                                                <td>
-                                                    <span class="glyphicon glyphicon-user"></span><label for="login_user">Username:</label>
-                                                </td>
-                                                <td>
-                                                   <input name="username" id="login_user" type="text" value="" />
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <span class="glyphicon glyphicon-lock"></span> <label for="login_pass">Password:</label>
-                                                </td>
-                                                <td>
-                                                    <input name="pass" id="login_pass" type="password" value="" />
-                                                </td>
-                                            </tr>
-                                            <tr>
+                            <div id="signin" class="tab-pane fade">
+                                <form id="loginForm" action="" method="POST">
+                                    <table id="loginTab" class="signinup center">
+                                        <tr>
+                                            <td>
+                                                <span class="glyphicon glyphicon-user"></span><label for="login_user">Username:</label>
+                                            </td>
+                                            <td>
+                                                <input name="username" id="login_user" type="text" value="" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <span class="glyphicon glyphicon-lock"></span> <label for="login_pass">Password:</label>
+                                            </td>
+                                            <td>
+                                                <input name="pass" id="login_pass" type="password" value="" />
+                                            </td>
+                                        </tr>
+                                        <tr>
                                             <td colspan="2"><span id="advisors"></span></td>
                                         </tr>
-                                            <tr>
-                                                <td colspan="2">
-                                                    <input type="button" class="btn btn-primary btn-block loginb" id="loginButton" value="Log In" />
-                                                </td>
-                                            </tr>
-                                            <input type="reset" id="resetLogin" hidden="hidden" />
-                                        </table>
-                                    </form>
-                                </div>
+                                        <tr>
+                                            <td colspan="2">
+                                                <input type="button" class="btn btn-primary btn-block loginb" id="loginButton" value="Log In" />
+                                            </td>
+                                        </tr>
+                                        <input type="reset" id="resetLogin" hidden="hidden" />
+                                    </table>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--------------- END REGISTRATION POPOVER MODAL ------------------>
-        <!--------------- BEGIN USER PROFILE POPOVER MODAL ------------------>
+    </div>
+    <!--------------- END REGISTRATION POPOVER MODAL ------------------>
+    <!--------------- BEGIN USER PROFILE POPOVER MODAL ------------------>
 
-        <div id="profile" class="modal fade" tabindex="-1" role="dialog">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="username_header">USER'S NAME HERE</h4>
-                    </div>
-                    <div class="modal-body">
+    <div id="profile" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="username_header">USER'S NAME HERE</h4>
+                </div>
+                <div class="modal-body">
 
-                        <h4>Games Played: <span id="games_played"></span></h4>
-                        <h4>Days Active: <span id="days_active"></span></h4>
-                        <h4>Contact Info: <span id="contact_info"></span></h4>
+                    <h4>Games Played: <span id="games_played"></span></h4>
+                    <h4>Days Active: <span id="days_active"></span></h4>
+                    <h4>Contact Info: <span id="contact_info"></span></h4>
 
-                    </div>
-                    <div class="modal-footer">
-                        <button id="logoutButton" type="button" class="btn btn-danger" data-dismiss="modal">Log Out</button>
-                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="logoutButton" type="button" class="btn btn-danger" data-dismiss="modal">Log Out</button>
                 </div>
             </div>
         </div>
-        <!--------------- END USER PROFILE POPOVER MODAL ------------------>
-
-     	
-
+    </div>
+    <!--------------- END USER PROFILE POPOVER MODAL ------------------>
 
 
-        <div class="header-bottom">
-            <!--header-bottom-->
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-9">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                        </div>
-                        <div class="mainmenu pull-left">
-                            <ul class="nav navbar-nav collapse navbar-collapse">
-                                <li><a href="index.html" class="active">Home</a></li>
-                                <li class="dropdown"><a href="#">Game<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="playstation.html">PLAYSTATION</a></li>
-                                        <li><a href="xbox.html">XBOX</a></li>
-                                        <li><a href="nintendo.html">Nintendo</a></li>
-                                        <li><a href="pc.html">PC</a></li>
-                                    
-                                    </ul>
+
+
+
+    <div class="header-bottom">
+        <!--header-bottom-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="mainmenu pull-left">
+                        <ul class="nav navbar-nav collapse navbar-collapse">
+                            <li><a href="index.html" class="active">Home</a></li>
+                            <li class="dropdown"><a href="#">Game<i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <li><a href="playstation.html">PLAYSTATION</a></li>
+                                    <li><a href="xbox.html">XBOX</a></li>
+                                    <li><a href="nintendo.html">Nintendo</a></li>
+                                    <li><a href="pc.html">PC</a></li>
+
+                                </ul>
                             </li>
-                                <li><a href="contact.php">Contact</a></li>
-                            </ul>
-                            
-                        </div>
+                            <li><a href="contact.php">Contact</a></li>
+                        </ul>
                     </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--/header-bottom-->
+</header>
+<!--/header-->
+
+
+<!--------------------------------------------- MAIN MAIN MAIN --------------------------------------------->
+<!--------------------------------------------- MAIN MAIN MAIN --------------------------------------------->
+
+
+
+<div id="contact-page" class="container">
+    <div class="bg">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="title text-center"><strong>PC Games</strong></h2>    			    				    				<div id="gmap" class="contact-map">
+                <img id = "contactimg" src ="pc.jpg" alt =""/>
+            </div>
+                <div class="blog-post-area">
+                    <h2 class="title text-center">New Releases </h2>
+
+
+
+                    <div class="single-blog-post">
+
+                        <h3>
+                            The Witcher 3: Wild Hunt - Hearts of Stone</h3>
+                        <div class="post-meta">
+                            <ul>
+
+                                <li><i class="fa fa-calendar"></i> Oct 13, 2015</li>
+                                <li><i class="fa fa-tags"></i> PS4, ARPG</li>
+                                <li><i class="fa fa-thumbs-o-up"></i></li>
+                                <li><i class="fa fa-trophy"></i></li>
+                                <li><i class="fa fa-video-camera"></i></li>
+                            </ul>
+
+                        </div>
+                        <a href="witcherexpc.html">
+                            <img src="witcherex.png" alt="">
+                        </a>
+                        <p> Hearts of Stone features over ten hours of new adventures and introduces new characters, powerful monsters, unique romance, and an entirely new storyline shaped by gamer choices. The expansion also introduces a new system of Runewords that significantly affects gameplay. Each Runeword impacts a different aspect of in-game mechanics and allows the players to experiment with various strategies and tactics. [CD Projekt]</p>
+                        <a  class="btn btn-primary" href="witcherexpc.html">Read More</a>
+                    </div>
+                    <hr>
+
+
+
+                    <div class="single-blog-post">
+                        <h3>The Witcher 3: Wild Hunt</h3>
+                        <div class="post-meta">
+                            <ul>
+                                <li><i class="fa fa-calendar"></i> May 19, 2015</li>
+                                <li><i class="fa fa-tags"></i> PC, ARPG</li>
+                                <li><i class="fa fa-thumbs-o-up"></i></li>
+                                <li><i class="fa fa-trophy"></i></li>
+                                <li><i class="fa fa-video-camera"></i></li>
+                            </ul>
+
+                        </div>
+                        <a href="witcherpc.html">
+                            <img src="wit3c.png" alt="">
+                        </a>
+                        <p>With the Empire attacking the Kingdoms of the North and the Wild Hunt, a cavalcade of ghastly riders, breathing down your neck, the only way to survive is to fight back. As Geralt of Rivia, a master swordsman and monster hunter, leave none of your enemies standing. Explore a gigantic open world, slay beasts and decide the fates of whole communities with your actions, all in a genuine next generation format. </p>
+                        <a  class="btn btn-primary" href="witcherpc.html">Read More</a>
+                    </div>
+                    <hr>
+
+
+                    <div class="single-blog-post">
+                        <h3>Fallout 4</h3>
+                        <div class="post-meta">
+                            <ul>
+                                <li><i class="fa fa-calendar"></i> Nov 10, 2015</li>
+                                <li><i class="fa fa-tags"></i> PC, Action Role-Playing Game</li>
+                                <li><i class="fa fa-thumbs-o-up"></i></li>
+                                <li><i class="fa fa-trophy"></i></li>
+                                <li><i class="fa fa-video-camera"></i></li>
+                            </ul>
+
+                        </div>
+                        <a href="fallpc.html">
+                            <img src="falld.jpg" alt="">
+                        </a>
+                        <p>As the sole survivor of Vault 111, you enter a world destroyed by nuclear war. Every second is a fight for survival, and every choice is yours. Only you can rebuild and determine the fate of the Wasteland. Welcome home.</p>
+                        <a  class="btn btn-primary" href="fallpc.html">Read More</a>
+                    </div>
+                    <hr>
+
+
+
+
+                    <div class="single-blog-post">
+                        <h3>Star Citizen</h3>
+                        <div class="post-meta">
+                            <ul>
+                                <li><i class="fa fa-calendar"></i>2016</li>
+                                <li><i class="fa fa-tags"></i> PC, Space Sim, FPS</li>
+                                <li><i class="fa fa-thumbs-o-up"></i></li>
+                                <li><i class="fa fa-trophy"></i></li>
+                                <li><i class="fa fa-video-camera"></i></li>
+                            </ul>
+
+                        </div>
+                        <a href="starcitizenpc.html">
+                            <img src="SC-Press-Kit-2/Logos/CS_STAR_CITZ_Steel_Style.jpg" alt="" style="height: 80%; width: 100%;">
+                        </a>
+                        <p>Star Citizen is being made exclusively through crowd funding and aims to be the first ever fully crowd funded AAA game. That leaves development in the hands of the artists and means that the buck stops with Chris Roberts and his team's creative vision instead of a publisher's balance sheet. Star Citizen fans have already told the world they want space sims and PC games back and we're going to make the game they want. For the first time in decades, game development will be beholden only to a pure creative vision!</p>
+                        <a  class="btn btn-primary" href="blood.html">Read More</a>
+                    </div>
+                    <hr>
 
                 </div>
             </div>
         </div>
-        <!--/header-bottom-->
-    </header>
-    <!--/header-->
+    </div></div>
 
- <div id="contact-page" class="container">
-    	<div class="bg">
-	    	<div class="row">    		
-	    		<div class="col-sm-12">    			   			
-					<h2 class="title text-center"><strong>PC Games</strong></h2>    			    				    				<div id="gmap" class="contact-map">
-                    <img id = "contactimg" src ="pc.jpg" alt =""/>
-					</div>
-				
-				</div>			 		
-			</div>  
-          </div></div>  
 
-    
+<!------------------------------------------- END MAIN END MAIN -------------------------------------------->
+<!------------------------------------------- END MAIN END MAIN -------------------------------------------->
 
 
 
-    <footer id="footer">
-        <!--Footer-->
-        <div class="footer-widget">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-2">
-                        <div class="single-widget">
-                            <h2>More Sites</h2>
-                            <ul class="nav nav-pills nav-stacked">
-                                <li><a href="http://www.ign.com">IGN</a></li>
-                                <li><a href="http://www.gamespot.com">Gamespot</a></li>
-                                <li><a href="http://www.polygon.com">Polygon</a></li>
-                                <li><a href="http://www.metacritic.com/game">Metacritic</a></li>
-                                <li><a href="http://www.escapistmagazine.com">Escapist</a></li>
-                            </ul>
-                        </div>
+<footer id="footer">
+    <!--Footer-->
+    <div class="footer-widget">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="single-widget">
+                        <h2>More Sites</h2>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="http://www.ign.com">IGN</a></li>
+                            <li><a href="http://www.gamespot.com">Gamespot</a></li>
+                            <li><a href="http://www.polygon.com">Polygon</a></li>
+                            <li><a href="http://www.metacritic.com/game">Metacritic</a></li>
+                            <li><a href="http://www.escapistmagazine.com">Escapist</a></li>
+                        </ul>
                     </div>
-                    <div class="col-sm-2">
-                        <div class="single-widget">
-                            <h2>Game</h2>
-                            <ul class="nav nav-pills nav-stacked">
-                                <li><a href="playstation.html">PLAYSTATION</a></li>
-                                
-                                          <li><a href="xbox.html">XBOX</a></li>
-                                    
-                                <li><a href="nintendo.html">Nintendo</a></li>                                 
-                                             <li><a href="pc.html">PC</a></li>
-
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-2">
-                        <div class="single-widget">
-                            <h2>More</h2>
-                            <ul class="nav nav-pills nav-stacked">
-                                <li><a href="about.html">About us</a></li>
-                                <li><a href="contact.html">Contact US</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-
-
                 </div>
+                <div class="col-sm-2">
+                    <div class="single-widget">
+                        <h2>Game</h2>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="playstation.html">PLAYSTATION</a></li>
+
+                            <li><a href="xbox.html">XBOX</a></li>
+
+                            <li><a href="nintendo.html">Nintendo</a></li>
+                            <li><a href="pc.html">PC</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="single-widget">
+                        <h2>More</h2>
+                        <ul class="nav nav-pills nav-stacked">
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="contact.php">Contact US</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
             </div>
         </div>
+    </div>
 
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row">
-                    <p class="pull-left">Copyright © 2015 Chris &amp; Chen. All rights reserved.</p>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <p class="pull-left">Copyright © 2015 Chris &amp; Chen. All rights reserved.</p>
 
-                </div>
             </div>
         </div>
+    </div>
 
-    </footer>
-    <!--/Footer-->
+</footer>
+<!--/Footer-->
 
 
 
