@@ -122,9 +122,7 @@ $(document).ready(function () {
                     }
 
                 }
-                //else if (xhr.readyState == 4) {
-                    alert("ERROR: Status is " + xhr.status);
-                }
+
             };
             xhr.send(params);
         }
@@ -167,9 +165,6 @@ $(document).ready(function () {
 
                 }
 
-            }
-            else if (xhr.readyState == 4) {
-                //alert("ERROR: Status is " + xhr.status);
             }
         };
         xhr.send(params);
@@ -221,9 +216,7 @@ $(document).ready(function () {
                 }
 
             }
-            else if (xhr.readyState == 4) {
-                //alert("ERROR: Status is " + xhr.status);
-            }
+
         };
         xhr.send(params);
     }
@@ -264,9 +257,7 @@ $(document).ready(function () {
                     $("#regadvisor").html('<div class="alert alert-danger">'+formAlert+'</div>')
                 }
             }
-            else if (xhr.readyState == 4) {
-                //alert ("ERROR: Status is " + xhr.status);
-            }
+
         };
         xhr.send(params);
 
