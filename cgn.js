@@ -25,11 +25,15 @@ $(document).ready(function () {
                                 if (pass.match(/[a-z]/)) {
                                     if (pass.match(/[A-Z]/)) {
                                         if (pass.match(/[0-9]/)) {
+                                            if (eml.length == 0 || eml.match(/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/)) {
 
-                                            // AJAX check for duplicate username
-                                            checkDupeUser(username, pass, pass_repeat, eml);
-                                            return;
 
+                                                // AJAX check for duplicate username
+                                                checkDupeUser(username, pass, pass_repeat, eml);
+                                                return;
+
+
+                                            } else {formAlert = ("That's not a valid email address!");}
                                         } else {formAlert = ("Password must have at least one number");}
                                     } else {formAlert = ("Password must have at least one uppercase letter");}
                                 } else {formAlert = ("Password must have at least one lowercase letter");}
