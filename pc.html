@@ -113,7 +113,7 @@
 
 
 
-        <!--------------- BEGIN REGISTRATION POPOVER MODAL ------------------>
+    <!--------------- BEGIN REGISTRATION POPOVER MODAL ------------------>
         <div id="regis" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="windowTitleLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -132,7 +132,7 @@
                                         <table id="registerTab" class="signinup center">
                                             <tr>
                                                 <td>
-                                                    <label for="reg_user">Username:</label>
+                                                  <span class="glyphicon glyphicon-user"></span> <label for="reg_user">Username:</label>
                                                 </td>
                                                 <td>
                                                     <input name="username" id="reg_user" type="text" value="" />
@@ -140,7 +140,7 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <label for="reg_pass">Password:</label>
+                                                   <span class="glyphicon glyphicon-lock"></span> <label for="reg_pass">Password:</label>
                                                 </td>
                                                 <td>
                                                     <input name="pass" id="reg_pass" type="password" value="" />
@@ -173,23 +173,23 @@
                                         <table id="loginTab" class="signinup center">
                                             <tr>
                                                 <td>
-                                                    <label for="login_user">Username:</label>
+                                                    <span class="glyphicon glyphicon-user"></span><label for="login_user">Username:</label>
                                                 </td>
                                                 <td>
-                                                    <input name="username" id="login_user" type="text" value="" />
+                                                   <input name="username" id="login_user" type="text" value="" />
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <label for="login_pass">Password:</label>
+                                                    <span class="glyphicon glyphicon-lock"></span> <label for="login_pass">Password:</label>
                                                 </td>
                                                 <td>
                                                     <input name="pass" id="login_pass" type="password" value="" />
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td colspan="2"><span id="advisors"></span></td>
-                                            </tr>
+                                            <td colspan="2"><span id="advisors"></span></td>
+                                        </tr>
                                             <tr>
                                                 <td colspan="2">
                                                     <input type="button" class="btn btn-primary btn-block loginb" id="loginButton" value="Log In" />

@@ -322,15 +322,19 @@ function contact(){
 				    	<form id="main-contact-form" class="contact-form row" action = $script name="contact-form" method="post"
                         onsubmit = "return check();">
 				            <div class="form-group col-md-6">
+                            <span>*</span>
 				                <input type="text" name="name" class="form-control" required="required" placeholder="Name">
 				            </div>
 				            <div class="form-group col-md-6">
+                            <span>*</span>
 				                <input type="email" name="email" class="form-control" required="required" placeholder="Email">
 				            </div>
 				            <div class="form-group col-md-12">
+                            <span>*</span>
 				                <input type="text" name="subject" class="form-control" required="required" placeholder="Subject">
 				            </div>
 				            <div class="form-group col-md-12">
+                            <span>*</span>
 				                <textarea name="comments" id="message" required="required" class="form-control" rows="8" placeholder="Your Message Here"></textarea>
 				            </div>    
                             <div><span id = "cadvisor"></span></div>
