@@ -1,5 +1,5 @@
 $(document).ready(function(){
-     $("#reg_username").focusin(function(){
+     $("#reg_user").focusin(function(){
          $("#regadvisor").html("<ul class=\"alert alert-warning\">" +
              "<li>Must be 6-10 character in length</li>" +
              "<li>Must begin with a letter</li> " +
