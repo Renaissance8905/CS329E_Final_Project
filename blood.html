@@ -1,0 +1,826 @@
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <script src="js/jquery.js"></script>
+
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/price-range.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/main.js"></script>
+    <title>Gaming World</title>
+
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/price-range.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+
+    <script type="text/javascript" src="regi.js"></script>
+    <link rel="stylesheet" href="regisPopover.css">
+    <script type="text/javascript" src="cgn.js"></script>
+
+
+</head>
+
+<body>
+    <header id="header">
+        <!--header-->
+        <div class="header_top">
+            <!--header_top-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="contactinfo">
+                            <ul class="nav nav-pills">
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="social-icons pull-right">
+                            <ul class="nav navbar-nav">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/header_top-->
+
+        <div class="header-middle">
+            <!--header-middle-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="logo pull-left">
+                            <a href="index.html"><img src="images/home/logo.png" alt="" /></a>
+                        </div>
+                        <div class="btn-group pull-right">
+
+
+                        </div>
+
+                    </div>
+                    <h1 id="title">Central Gaming Network</h1>
+                    <div class="col-sm-8">
+
+                        <div class="shop-menu pull-right">
+
+                            <ul class="nav navbar-nav">
+                                <span id="regisButton"><li><a href="#regis" role="button" class="link" data-toggle="modal"><i class="fa fa-lock"></i>Login</a></li></span>
+                                <span id="profileButton" hidden="hidden"><li><a href="#profile" role="button" class="link" data-toggle="modal">My Account</a></li></span>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--/header-middle-->
+
+
+
+<!--------------- BEGIN REGISTRATION POPOVER MODAL ------------------>
+        <div id="regis" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="windowTitleLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" id="dismiss_regis" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="tabbable">
+                            <ul class="nav nav-tabs">
+                                <li class="active"><a href="#registration" data-toggle="tab">Register</a></li>
+                                <li><a href="#signin" data-toggle="tab">Log In</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="registration" class="tab-pane fade active in">
+                                    <form id="regForm" action="" method="POST">
+                                        <table id="registerTab" class="signinup center">
+                                            <tr>
+                                                <td>
+                                                  <span class="glyphicon glyphicon-user"></span> <label for="reg_user">Username:</label>
+                                                </td>
+                                                <td>
+                                                    <input name="username" id="reg_user" type="text" value="" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                   <span class="glyphicon glyphicon-lock"></span> <label for="reg_pass">Password:</label>
+                                                </td>
+                                                <td>
+                                                    <input name="pass" id="reg_pass" type="password" value="" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <label for="reg_pass_repeat">Confirm Password:</label>
+                                                </td>
+                                                <td>
+                                                    <input name="pass_repeat" id="reg_pass_repeat" type="password" value="" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2"><span id="advisor"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <input type="button" class="btn btn-primary btn-block loginb" id="regButton" value="Register" />
+                                                </td>
+                                            </tr>
+                                            <input type="reset" id="resetSignin" hidden="hidden" />
+                                        </table>
+                                    </form>
+                                </div>
+
+
+                                <div id="signin" class="tab-pane fade">
+                                    <form id="loginForm" action="" method="POST">
+                                        <table id="loginTab" class="signinup center">
+                                            <tr>
+                                                <td>
+                                                    <span class="glyphicon glyphicon-user"></span><label for="login_user">Username:</label>
+                                                </td>
+                                                <td>
+                                                   <input name="username" id="login_user" type="text" value="" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <span class="glyphicon glyphicon-lock"></span> <label for="login_pass">Password:</label>
+                                                </td>
+                                                <td>
+                                                    <input name="pass" id="login_pass" type="password" value="" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            <td colspan="2"><span id="advisors"></span></td>
+                                        </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <input type="button" class="btn btn-primary btn-block loginb" id="loginButton" value="Log In" />
+                                                </td>
+                                            </tr>
+                                            <input type="reset" id="resetLogin" hidden="hidden" />
+                                        </table>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--------------- END REGISTRATION POPOVER MODAL ------------------>
+        <!--------------- BEGIN USER PROFILE POPOVER MODAL ------------------>
+
+        <div id="profile" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="username_header">USER'S NAME HERE</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <h4>Games Played: <span id="games_played"></span></h4>
+                        <h4>Days Active: <span id="days_active"></span></h4>
+                        <h4>Contact Info: <span id="contact_info"></span></h4>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button id="logoutButton" type="button" class="btn btn-danger" data-dismiss="modal">Log Out</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--------------- END USER PROFILE POPOVER MODAL ------------------>
+
+
+
+
+
+        <div class="header-bottom">
+            <!--header-bottom-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-9">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="mainmenu pull-left">
+                            <ul class="nav navbar-nav collapse navbar-collapse">
+                                <li><a href="index.html" class="active">Home</a></li>
+                                <li class="dropdown"><a href="#">Game<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">
+                                        <li><a href="playstation.html">PLAYSTATION</a></li>
+                                        <li><a href="xbox.html">XBOX</a></li>
+                                        <li><a href="nintendo.html">Nintendo</a></li>
+                                        <li><a href="pc.html">PC</a></li>
+                                       
+                                    </ul>
+                                    </li>
+                             <li><a href="contact.php">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--/header-bottom-->
+    </header>
+    <!--/header-->
+<div id="contact-page" class="container">
+    	<div class="bg">
+	    	<div class="row">    		
+	    		<div class="col-sm-12">    			   			
+                                 					<div class="product-details">
+						<div class="col-sm-5">
+							<div class="view-product" style ="text-align:center;">
+								<img src="bloodp.jpg" alt=""  style="width:80%;"/>
+							
+							</div>
+							<div id="similar-product" class="carousel slide" data-ride="carousel">
+								
+								 
+							</div>
+
+						</div>
+						<div class="col-sm-7">
+							<div class="product-information" style = "height:380px;">
+							    
+								<h2>Bloodborne</h2>
+								<span style>
+									<p style = "padding:10px;"><b>Price Now: </b>$39.99</p>
+                                    <p style = "padding:10px;"><b>Platform:</b>PS4 Only</p>
+									<p style = "padding:10px;"><b>Genre(s):</b> Action Role-Playing Game</p>
+								<p style = "padding:10px;"><b>Release Date:</b> March 24, 2015</p>
+								
+								<p style = "padding:10px;"><b>ESRB:</b>                <img src="esrb-m.png" alt=""></p>
+								</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="category-tab shop-details-tab"><!--category-tab-->
+						<div class="col-sm-12">
+							<ul id = "bar" class="nav nav-tabs">
+								<li  class="active"><a href="#details" data-toggle="tab">More Details</a></li>
+								<li><a href="#feature" data-toggle="tab">Feature</a></li>
+								<li><a href="#video" data-toggle="tab">Video & Images</a></li>
+								<li><a href="#award" data-toggle="tab">Award & Rating</a></li>
+							</ul>
+						</div>
+						<div class="tab-content">
+							<div class="tab-pane fade active in" id="details" >
+							<div class="col-sm-12">
+                            <p><b>Platform:</b>PS4 Only</p>
+									<p><b>Genre(s):</b> Action Role-Playing Game</p>
+									<p><b>Mode(s):</b> Single-Player & Multiplayer</p>
+									<table class ="table">
+									   <tr>
+                                            <td><b>Release Date</b></td>
+                                            <td>March 24, 2015</td>
+                                        </tr>
+                                    
+                                        
+                                        <tr>
+                                            <td><b>Publisher</b></td>
+                                            <td>Sony Computer Entertainment</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Developer</b></td>
+                                            <td> FromSoftware</td>
+                                        </tr>
+                                       
+                                        <tr>
+                                            <td><b>Director(s)</b></td>
+                                            <td>Hidetaka Miyazaki</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Producer(s)</b></td>
+                                            <td>Masaaki Yamagiwa,Teruyuki Toriyama</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Designer(s)</b></td>
+                                            <td>Kazuhiro Hamatani</td>
+                                        </tr><tr>
+                                            <td><b>Programmer(s):</b></td>
+                                            <td>Jun Ito</td>
+                                        </tr><tr>
+                                            <td><b>Composer(s)</b></td>
+                                            <td>Ryan Amon,Tsukasa Saitoh,Yuka Kitamura,Nobuyoshi Suzuki,Cris Velasco,Michael Wandmacher</td>
+                                        </tr>
+                                       
+								
+				</table>
+							
+								
+								</div>
+								
+							</div>
+							<div class="tab-pane fade" id="feature" >
+								<div class="col-sm-12">
+                             <div id="slider-carousel" class="carousel slide" data-ride="carousel" style="height:750px;">
+                        <ol class="carousel-indicators" >
+                            <li data-target="#slider-carousel" data-slide-to="0" class="active" ></li>
+                            <li data-target="#slider-carousel" data-slide-to="1"></li>
+                            <li data-target="#slider-carousel" data-slide-to="2"></li>
+                            <li data-target="#slider-carousel" data-slide-to="3"></li>
+                             <li data-target="#slider-carousel" data-slide-to="4"></li>
+                               <li data-target="#slider-carousel" data-slide-to="5"></li>
+                                 <li data-target="#slider-carousel" data-slide-to="6"></li>
+                                   <li data-target="#slider-carousel" data-slide-to="7"></li>
+                                     <li data-target="#slider-carousel" data-slide-to="8"></li>
+                                       <li data-target="#slider-carousel" data-slide-to="9"></li>
+                                         <li data-target="#slider-carousel" data-slide-to="10"></li>
+                                           <li data-target="#slider-carousel" data-slide-to="11"></li>
+                                             <li data-target="#slider-carousel" data-slide-to="12"></li>
+                    
+                        </ol>
+
+                        <div class="carousel-inner">
+                            <div class="item active">
+                        
+                              
+                                
+                                <div class="col-sm-6">
+                                    
+                                    <img src="blood1.jpg" style="width:100%;height:100%;"></div>
+                                     <div class="col-sm-6">
+                                   <h1>Face your fears</h1>
+                              <p>Face your fears in this dangerous new world, where danger, death and madness lurk around every corner. The latest Action RPG from renowned Japanese developer FromSoftware, makers of the hit Dark Souls series, coming exclusively to the PlayStation®4 system. Face your fears as you search for answers in the ancient city of Yharnam, now cursed with a strange endemic illness spreading through the streets like wildfire. Danger, death and madness lurk around every corner of this dark and horrific world, and you must discover its darkest secrets in order to survive.</p>
+                                </div>
+                                    </div>
+                            
+                                 
+                            <div class="item"> 
+                                 <div class="col-sm-6">
+                                  
+                                          <img src="blood2.png" style="width:100%;height:100%;"> </div>
+                              
+                                <div class="col-sm-6">
+                                    <h1>A terrifying new world</h1>
+                                <p>Journey to a horror-filled Gothic city where deranged mobs and nightmarish creatures lurk around every corner.</p>
+                                      
+                            </div>
+                            </div>
+                            <div class="item">
+                                  
+                               
+                                <div class="col-sm-6" >
+                                    <img src="blood3.jpg" style="width:100%;height:100%;">
+                               
+                            
+                                </div>
+                                 <div class="col-sm-6">
+                                    <h1>Strategic Action Combat</h1>
+                                     <p>Armed with a unique arsenal of weaponry, including guns and saw cleavers, you'll need wits, strategy and reflexes to take down the agile and intelligent enemies that guard the city's dark secrets.</p>
+                                </div>
+                                
+                            </div>
+                            
+                            <div class="item ">
+                               
+                               
+                                <div class="col-sm-6">
+                                <img src="blood4.jpg" style="width:100%;height:100%;">
+                                </div>
+                                <div class="col-sm-6">
+                                    <h1>A New Generation of Action RPG</h1>
+                                     <p>Stunningly detailed gothic environments, atmospheric lighting, and advanced new online experiences showcase the power and prowess of the PlayStation(R)4 system.</p>
+                                
+                                </div>
+                            </div>
+
+                         <div class="item ">
+                            
+                              
+                                <div class="col-sm-6">
+                                <img src="blood5.jpg" style="width:100%;height:100%;">
+                                </div>
+                                 <div class="col-sm-6">
+                                    <h1>Ever-changing Chalice Dungeons to Explore</h1>
+                                    <p> Use holy chalices to gain entrance to a network of vast underground ruins, filled with traps, beasts, and rewards, to explore and conquer alone or with others. These procedurally generated dungeons offer brand new challenges to master, and can be uploaded or shared with friends. </p>
+                         
+                                </div>
+                            </div>
+                             <div class="item ">
+                            
+                              
+                                <div class="col-sm-6">
+                                <img src="blood6.jpeg" style="width:100%;height:100%;">
+                                </div>
+                                 <div class="col-sm-6">
+                                    <h1>Bestiary</h1>
+                                    <p> Get a peek into some of the terrifying creatures you'll see during your time with Bloodborne.</p>
+                         
+                                </div>
+                            </div>
+                             <div class="item ">
+                            
+                              
+                                <div class="col-sm-6">
+                                <img src="blood7.jpg" style="width:100%;height:100%;">
+                                </div>
+                                 <div class="col-sm-6">
+                                   <h1>Gameplay Details</h1>
+                                    <h2>Regain System</h2>
+                                    <p> In Yharnam, the best defense is a solid, strategic offense.
+
+When youtake damage from enemies, counter-attack the enemy within a certain period of time to regain some of your lost HP. The damage taken initially turns orange, indicating you can earn it back if you are quick enough. Hesitate too long and you’ll lose that health for good.
+
+With a stroonger focus on offense and pro-active combat, battles become more pitched, thrilling and rewarding.</p>
+                         
+                                </div>
+                            </div>
+                            <div class="item ">
+                            
+                              
+                                <div class="col-sm-6">
+                                <img src="blood8.jpg" style="width:100%;height:100%;">
+                                </div>
+                                 <div class="col-sm-6">
+                                   <h1>Gameplay Details</h1>
+                                    <h2>Offensive Parry</h2>
+                                    <p> Bloodborne encourages characters to say on the offensive, using an equipped firearm as a staggering tool. By unloading a shot right before the enemy's attack lands, the tables are instantly turned, leaving them staggered and open to a devastating Visceral Attack.</p>
+                         
+                                </div>
+                            </div>
+                            <div class="item ">
+                            
+                              
+                                <div class="col-sm-6">
+                                <img src="blood9.jpg" style="width:100%;height:100%;">
+                                </div>
+                                 <div class="col-sm-6">
+                                   <h1>Online Details</h1>
+                                    <h2>Messengers</h2>
+                                    <p> These small creatures have crept out of a nightmare, and while they may not look too friendly, they accompany hunters, follow their orders, and take care of messages left for others.</p>
+                         
+                                </div>
+                            </div>
+                            <div class="item ">
+                            
+                              
+                                <div class="col-sm-6">
+                                <img src="blood11.jpeg" style="width:100%;height:100%;">
+                                </div>
+                                 <div class="col-sm-6">
+                                   <h1>Online Details</h1>
+                                    <h2>Co-Op Battles</h2>
+                                    <p> Some of the dangers lurking within Yharnam are better faced with another Hunter or two by your side, but even then, victory is not guaranteed.</p>
+                         
+                                </div>
+                            </div>
+                            <div class="item ">
+                            
+                              
+                                <div class="col-sm-6">
+                                <img src="blood10.jpg" style="width:100%;height:100%;">
+                                </div>
+                                 <div class="col-sm-6">
+                                    <h1>Traps</h1>
+                                    <p> Both a grave and a place of slumber, these dungeons are not a place where visitors are welcomed. Those who venture here quickly find this out thanks to the many fatal traps hidden throughout the tunnels and halls, such as these guillotine blades covered in the blood of unsuspecting Hunters.</p>
+                         
+                                </div>
+                            </div>
+                            <div class="item ">
+                            
+                              
+                                <div class="col-sm-6">
+                                <img src="blood12.png" style="width:100%;height:100%;">
+                                </div>
+                                 <div class="col-sm-6">
+                                    <h1>Weapons</h1>
+                                    <p> Bloodborne's vast variety of intricately-detailed transforming melee weapons, supported by a selection of close- and medium-range firearms, gives players a wide range of choices for range, speed and brute force attacks. </p>
+                         
+                                </div>
+                            </div>
+                            <div class="item ">
+                            
+                              
+                                <div class="col-sm-6">
+                                <img src="blood13.jpg" style="width:100%;height:100%;">
+                                </div>
+                                 <div class="col-sm-6">
+                                    <h1>Chalice Dungeons</h1>
+                                    <p>Procedurally-generated to create a new, harrowing experience every time you enter, Chalice Dungeons offer a chance to experience Bloodborne's sense of exploration, danger and reward in all new ways. Play alone or with other Hunters, and share your creations with friends or the world. </p>
+                         
+                                </div>
+                            </div>
+  </div>
+                        <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                                </div></div>
+						
+                                
+							
+							<div class="tab-pane fade" id="video" >
+								<div class="col-sm-12">
+                                    <div id="slider-carouse" class="carousel slide" data-ride="carousel" style="height:550px;">
+                        <ol class="carousel-indicators" >
+                            <li data-target="#slider-carouse" data-slide-to="0" class="active" ></li>
+                            <li data-target="#slider-carouse" data-slide-to="1"></li>
+                            <li data-target="#slider-carouse" data-slide-to="2"></li>
+                            <li data-target="#slider-carouse" data-slide-to="3"></li>
+                             <li data-target="#slider-carouse" data-slide-to="4"></li>
+                             <li data-target="#slider-carouse" data-slide-to="5"></li>
+                        </ol>
+
+                        <div class="carousel-inner">
+                            <div class="item active">
+                              <div class ="vt">
+                               <div class="col-sm-6">
+                                   <h1>Official Story Trailer</h1>
+                              
+                                </div>
+                                
+                                <div class="col-sm-6">
+                                    
+                                   <iframe width="560" height="315" src="https://www.youtube.com/embed/iTDvYvlyPaE" frameborder="0" allowfullscreen></iframe>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item"> 
+                                <div class ="vt">
+                                <div class="col-sm-6">
+                                    <h1>Official Debut Trailer</h1>
+                               
+                                      
+                            </div>
+                                 <div class="col-sm-6">
+                                 <iframe width="560" height="315" src="https://www.youtube.com/embed/G203e1HhixY?list=PLol_ykYs3OQ5SscsTdjrfCvmummWlCt3u" frameborder="0" allowfullscreen></iframe>
+                                        
+                              
+                                
+                                    </div></div>
+                            </div>
+                            <div class="item">
+                                   <div class ="vt">
+                                <div class="col-sm-6">
+                                    <h1>Offical Gameplay Trailer</h1>
+                                    
+                                </div>
+                                <div class="col-sm-6" >
+                                   
+                               <iframe width="560" height="315" src="https://www.youtube.com/embed/_5o8jwqKsDE?list=PLol_ykYs3OQ5SscsTdjrfCvmummWlCt3u" frameborder="0" allowfullscreen></iframe>
+                            
+                                </div>
+                                
+                                
+                                </div></div>
+                            
+                            <div class="item ">
+                               <div class="col-sm-6">
+                                    <h1>More Pictures</h1>
+                        
+                                
+                                </div>
+                               
+                                <div class="col-sm-6">
+                         <img class = "dim"  src="bloodb3.jpg" alt="">
+                                </div>
+                                
+                            </div>
+
+                        <div class="item ">
+                            
+                              
+                                
+                                 <div class="col-sm-6">
+                                    <h1>More Pictures</h1>
+                            
+                         
+                                </div>
+                                <div class="col-sm-6">
+                                 <img class = "dim" src="bloodb1.jpg" alt="">
+                                </div>
+                            </div>
+                              <div class="item ">
+                            
+                              
+                                
+                                 <div class="col-sm-6">
+                                    <h1>More Pictures</h1>
+                            
+                         
+                                </div>
+                                <div class="col-sm-6">
+                                 <img class = "dim" src="bloodb2.jpg" alt="">
+                                </div>
+                            </div>
+  </div>
+                        <a href="#slider-carouse" class="left control-carousel hidden-xs" data-slide="prev">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a href="#slider-carouse" class="right control-carousel hidden-xs" data-slide="next">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                                    </div></div></div>
+                          
+							
+							<div class="tab-pane fade" id="award" >
+								<div class="col-sm-12">
+								
+								<div class = "vt">
+								<img src="bloodaw.png" alt="" style="width:100%;"/>
+								 <h2>Metacritic User Score: 8.8<br>Metascore: 92</h2>
+								 <img src="TGA.jpg" alt="" style="width:100%;"/>
+								 <h2>The Game Award 2015</h2>
+								<h3>Game of the Year(Nominated)</h3>
+								<h3>Best Art Direction(Nominated)</h3>
+							<h3>Best Role Playing Game(Nominated)</h3>
+						<img src="golden.jpg" alt="" style="width:100%;"/>
+                                
+                                 <h2>Golden Joystick Awards</h2>
+                                 <h3>Best PlayStation Game</h3>
+                                 <h3>Best Original Game</h3>
+                                 <h3>Best Storytelling(Nominated)</h3>
+                                 <h3>Best Visual Design(Nominated)</h3>
+                                 <h3>Best Audio(Nominated)</h3>
+                                 <h3>Best Multiplayer Game(Nominated)</h3>
+                                 <h3>Best Gaming Moment(Nominated)</h3>
+                                 <h3>Game of the Year(Nominated)</h3>
+                              
+                                  </div>
+                                   
+								</div>
+							</div>
+							
+						</div>
+                    </div>
+					
+					<div class="recommended_items"><!--recommended_items-->
+						<h2 class="title text-center">Games You may like</h2>
+						
+						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
+							
+								<div class="item">	
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products" style = "height:410px;">
+												<div class="productinfo text-center">
+												
+													<img src="witex.jpg" alt="" style = "height:300px"/>
+													<h2>The Witcher 3: Wild Hunt              - Hearts of Stone</h2>
+													<a href = "witcherexps.html">PS4</a> |
+													 <a href = "witcherexxbox.html">Xbox One</a> |
+													 <a href = "witcherexpc.html">PC</a>
+													
+													
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products" style = "height:410px;">
+												<div class="productinfo text-center" >
+													<img src="F1.jpg" alt="" style = "height:300px" />
+													<h2>Fallout 4</h2>
+													<a href = "fallps.html">PS4</a> |
+                                                    <a href = "fallxbox.html">Xbox One</a> |
+                                                    <a href = "fallpc.html">PC</a> 
+													
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products" style = "height:410px;">
+												<div class="productinfo text-center" >
+														<img src="witcherps.jpg" alt="" style = "height:300px"/>
+													<h2>The Witcher 3: Wild Hunt</h2>
+													<a href = "witcherps.html">PS4</a> |
+													 <a href = "witcherxbox.html">Xbox One</a> |
+													 <a href = "witcherpc.html">PC</a>
+													
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+							
+						</div>
+					
+				</div>
+                                    
+                                    </div></div>
+    </div>
+					
+				
+
+    <footer id="footer">
+        <!--Footer-->
+        <div class="footer-widget">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="single-widget">
+                            <h2>More Sites</h2>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="http://www.ign.com">IGN</a></li>
+                                <li><a href="http://www.gamespot.com">Gamespot</a></li>
+                                <li><a href="http://www.polygon.com">Polygon</a></li>
+                                <li><a href="http://www.metacritic.com/game">Metacritic</a></li>
+                                <li><a href="http://www.escapistmagazine.com">Escapist</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="single-widget">
+                            <h2>Game</h2>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="playstation.html">PLAYSTATION</a></li>
+                                
+                                          <li><a href="xbox.html">XBOX</a></li>
+                                    
+                                <li><a href="nintendo.html">Nintendo</a></li>                                 
+                                             <li><a href="pc.html">PC</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="single-widget">
+                            <h2>More</h2>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="about.html">About us</a></li>
+                                <li><a href="contact.html">Contact US</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <p class="pull-left">Copyright © 2015 Chris &amp; Chen. All rights reserved.</p>
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!--/Footer-->
+
+
+
+
+</body>
+
+</html>

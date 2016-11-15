@@ -1,0 +1,98 @@
+.modal-body {
+    overflow-y: auto;
+    height: 100%;
+}
+.tabbable{
+    text-align: center;
+}
+
+.nav-tabs {
+    border: none;
+    background-color: white;
+    padding-top: 20px;
+
+}
+.nav-tabs > li {
+    display: inline;
+    width: 250px;
+    border-radius: 10px;
+    padding-right: 10px;
+}
+
+.nav-tabs > li > a{
+    border: none;
+    background-color: darkgoldenrod;
+    font-size: large;
+    color: black;
+    text-align: center;
+}
+.nav-tabs > li > a:hover{
+    background-color: lightgoldenrodyellow !important;
+    border: medium none;
+    color: black;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover{
+    background-color: goldenrod !important;
+    color: black;
+}
+
+#regis > div {
+    border-radius: 5px;
+}
+
+.signinup.center {
+    margin: auto;
+    width: auto;
+}
+
+.modal-dialog {
+    position:absolute;
+    margin:10% 30%;
+    background-color: goldenrod;
+}
+
+.tab-content {
+    background-color: goldenrod;
+}
+
+.signinup tr td {
+    height: 30px;
+    padding-top: 20px;
+    width: 140px;
+}
+
+.signinup tr td label {
+    font-size: medium;
+
+}
+
+
+
+/* Hold space for alerts in login and register panes */
+#registerTab tr:nth-child(5) td, #loginTab tr:nth-child(3) {
+    margin-top: 10px;
+    height: 140px;
+    padding-top: 20px;
+}
+
+
+#loginTab tr {
+    height: 60px;
+}
+.loginb{
+    height:50px;
+    width:100px;
+    background:#FE980F;
+    border: 0 none;
+    margin-bottom: 24px;
+}
+
+
+
+#advisor ul{
+    padding-left: 0px;
+    font-size: small;
+}

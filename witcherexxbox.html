@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <script src="js/jquery.js"></script>
+
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/price-range.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/main.js"></script>
+
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/price-range.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
+
+
+    <script type="text/javascript" src="regi.js"></script>
+    <link rel="stylesheet" href="regisPopover.css">
+    <script type="text/javascript" src="cgn.js"></script>
+
+
+    <title>Gaming World</title>
+</head>
+
+<body>
+<header id="header">
+    <div class="header-middle">
+        <!--header-middle-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="logo pull-left">
+                        <a href="index.html"><img src="images/home/logo.png" alt="" /></a>
+                    </div>
+                </div>
+                <h1 id="title">Central Gaming Network</h1>
+                <div class="col-sm-8">
+                    <div class="shop-menu pull-right">
+                        <div class="nav navbar-nav">
+                                <span id="regisButton">
+                                    <li><a href="#regis" role="button" class="link" data-toggle="modal"><i class="fa fa-lock"></i>Login</a></li>
+                                </span>
+                                <span id="profileButton" hidden="hidden">
+                                    <li><a href="#profile" role="button" class="link" data-toggle="modal">My Account</a></li>
+                                </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/header-middle-->
+    <!--header-bottom-->
+    <div class="header-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-9">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="mainmenu pull-left">
+                        <ul class="nav navbar-nav collapse navbar-collapse">
+                            <li><a href="index.html">Home</a></li>
+                            <li class="dropdown"><a href="index.html" class="active">Games<i class="fa fa-angle-down"></i></a>
+                                <ul role="menu" class="sub-menu">
+                                    <li><a href="playstation.html">PLAYSTATION</a></li>
+                                    <li><a href="xbox.html">XBOX</a></li>
+                                    <li><a href="nintendo.html">NINTENDO</a></li>
+                                    <li><a href="pc.html">PC</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="contact.php">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/header-bottom-->
+    <!--------------- BEGIN REGISTRATION POPOVER MODAL ------------------>
+    <div id="regis" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="windowTitleLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" id="dismiss_regis" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                    <div class="tabbable">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#registration" data-toggle="tab">Register</a></li>
+                            <li><a href="#signin" data-toggle="tab">Log In</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="registration" class="tab-pane fade active in">
+                                <form id="regForm" action="" method="POST">
+                                    <table id="registerTab" class="signinup center">
+                                        <tr>
+                                            <td>
+                                                <label for="reg_user"><span class="glyphicon glyphicon-user"></span> Username:</label>
+                                            </td>
+                                            <td>
+                                                <input name="username" id="reg_user" type="text" value="" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="reg_pass"><span class="glyphicon glyphicon-lock"></span> Password:</label>
+                                            </td>
+                                            <td>
+                                                <input name="pass" id="reg_pass" type="password" value="" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="reg_pass_repeat"><span class="glyphicon glyphicon-lock"></span> Confirm Password:</label>
+                                            </td>
+                                            <td>
+                                                <input name="pass_repeat" id="reg_pass_repeat" type="password" value="" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="email_addr"><span class="glyphicon glyphicon-envelope"></span> Email Address:(Optional)</label>
+                                            </td>
+                                            <td>
+                                                <input name="email" id="email_addr" type="email" value="" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2"><span id="regadvisor"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <input type="button" class="btn btn-primary btn-block loginb" id="regButton" value="Register" />
+                                                <input type="reset" id="resetSignin" hidden="hidden" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </div>
+
+
+                            <div id="signin" class="tab-pane fade">
+                                <form id="loginForm" action="" method="POST">
+                                    <table id="loginTab" class="signinup center">
+                                        <tr>
+                                            <td>
+                                                <label for="login_user"><span class="glyphicon glyphicon-user"></span> Username:</label>
+                                            </td>
+                                            <td>
+                                                <input name="username" id="login_user" type="text" value="" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="login_pass"><span class="glyphicon glyphicon-lock"></span> Password:</label>
+                                            </td>
+                                            <td>
+                                                <input name="pass" id="login_pass" type="password" value="" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2"><span id="loginadvisor"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <input type="button" class="btn btn-primary btn-block loginb" id="loginButton" value="Log In" />
+                                                <input type="reset" id="resetLogin" hidden="hidden" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------------- END REGISTRATION POPOVER MODAL ------------------>
+    <!--------------- BEGIN USER PROFILE POPOVER MODAL ---------------->
+    <div id="profile" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="username_header"></h4>
+                </div>
+                <div class="modal-body">
+                    <h4>Games Played: <span id="games_played"></span></h4>
+                    <h4>Days Active: <span id="days_active"></span></h4>
+                    <h4>Contact Info: <span id="contact_info"></span></h4>
+                </div>
+                <div class="modal-footer">
+                    <button id="logoutButton" type="button" class="btn btn-danger" data-dismiss="modal">Log Out</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--------------- END USER PROFILE POPOVER MODAL ------------------>
+</header>
+<!--/header-->
+
+
+
+<!--------------------------------------------- MAIN MAIN MAIN --------------------------------------------->
+<!--------------------------------------------- MAIN MAIN MAIN --------------------------------------------->
+<!--------------------------------------------- MAIN MAIN MAIN --------------------------------------------->
+
+
+<div id="contact-page" class="container">
+    	<div class="bg">
+	    	<div class="row">    		
+	    		<div class="col-sm-12">    			   			
+                                 					<div class="product-details">
+						<div class="col-sm-5">
+							<div class="view-product" style = "text-align:center;">
+								<img src="WIEXC.jpg" alt="" style="width:80%">
+							
+							</div>
+							<div id="similar-product" class="carousel slide" data-ride="carousel">
+								
+								 
+							</div>
+
+						</div>
+						<div class="col-sm-7">
+							<div class="product-information" style = "height:380px;">
+							    
+								<h2>The Witcher 3: Wild Hunt - Hearts of Stone - Xbox One</h2>
+								<span>
+									<p style = "padding:10px;"><b>Price: </b>$9.99</p>
+									<p style = "padding:10px;"><b>Platform:</b>Xbox One     |   <b>Also On:</b> PC, PS4</p>
+									<p style = "padding:10px;"><b>Genre(s):</b> Action Role-Playing Game</p>
+								<p style = "padding:10px;"><b>Release Date:</b> Oct 13, 2015</p>
+								
+								<p style = "padding:10px;"><b>ESRB:</b>                <img src="esrb-m.png" alt=""></p>
+								</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="category-tab shop-details-tab"><!--category-tab-->
+						<div class="col-sm-12">
+							<ul id = "bar" class="nav nav-tabs">
+								<li  class="active"><a href="#details" data-toggle="tab">More Details</a></li>
+								<li><a href="#feature" data-toggle="tab">Feature</a></li>
+								<li><a href="#video" data-toggle="tab">Video & Images</a></li>
+								<li><a href="#award" data-toggle="tab">Award & Rating</a></li>
+							</ul>
+						</div>
+						<div class="tab-content">
+							<div class="tab-pane fade active in" id="details" >
+							<div class="col-sm-12">
+                            <p><b>Platform:</b>Xbox One     |   <b>Also On:</b> PC, PS4</p>
+									<p><b>Genre(s):</b> Action Role-Playing Game</p>
+									<p><b>Mode(s):</b> Single-Player</p>
+									
+								<table class="table">
+									     <tr>
+                                            <td><b>Release Date</b></td>
+                                            <td>Oct 13, 2015</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Series</b></td>
+                                            <td>The Witcher</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Engine</b></td>
+                                            <td>REDengine 3</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Publisher</b></td>
+                                            <td>CD Projekt RED</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Developer</b></td>
+                                            <td>CD Projekt</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Distributor(s)</b></td>
+                                            <td>Warner Bros. Interactive Entertainment</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Director(s)</b></td>
+                                            <td>Konrad Tomaszkiewicz, Mateusz Kanik, Sebastian Stępień</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Producer(s)</b></td>
+                                            <td>Piotr Krzywonosiuk, Jędrzej Mróz</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Artist(s)</b></td>
+                                            <td>Marian Chomiak</td>
+                                        </tr><tr>
+                                            <td><b>Writer(s)</b></td>
+                                            <td>Marcin Blacha, Borys Pugacz-Muraszkiewicz</td>
+                                        </tr><tr>
+                                            <td><b>Composer(s)</b></td>
+                                            <td>Marcin Przybyłowicz, Mikolai Stroinski, Percival</td>
+                                        </tr>
+                                    </table>
+								</div>
+								
+							</div>
+							
+							<div class="tab-pane fade" id="feature" ><div class="col-sm-12">
+								<h1>About the game</h1>
+						<hr>
+								<p>SOME MONSTERS ARE BORN,OTHERS ARE MADE.</p>
+        <p>Step again into the shoes of Geralt of Rivia, a professional monster slayer, this time hired to defeat a ruthless bandit captain, Olgierd von Everec, a man who possesses the power of immortality. This expansion to “The Witcher 3: Wild Hunt” packs over 10 hours of new adventures, introducing new characters, powerful monsters, unique romance and a brand new storyline shaped by your choices.</p>
+                              <hr>
+                               <h2>Continue the journey of a professional monster slayer.</h2>
+                               <li>Level up Geralt with more witcher work and acquire custom equipment</li>
+
+<li>Defeat your foes using a variety of new weapons and enchanted artifacts.</li>
+                         <li>       Level up even further by fulfilling new monster contracts and battling unique enemies.</li>
+<li>Enjoy some leisure time playing with new gwent cards, or engage in a new romantic relationship.</li>
+                               <hr>
+                               <h2>Face an immortal enemy.</h2>
+                               <li>Hired by the Merchant of Mirrors, Geralt is tasked with overcoming Olgierd von Everec -- a ruthless bandit captain enchanted with the power of immortality.
+
+</li>
+                               <li>Fulfill a contract for the soul-stealing Merchant of Mirrors, a mysterious traveller who helped you find Yennefer.</li>
+                               <li>Fulfill three impossible tasks to defeat Olgierd, a ruthless bandit captain under an immortality spell.</li>
+                               <li>Choose your own way through an adventure that includes recruiting a crew of break-in artists, spending a night partying with a ghost and outsmarting the most bizarre creatures Geralt has ever faced.</li>
+                                </div></div>
+							
+							<div class="tab-pane fade" id="video" >
+								<div class="col-sm-12">
+                             <div id="slider-carousel" class="carousel slide" data-ride="carousel" style="height:600px;">
+                        <ol class="carousel-indicators" >
+                            <li data-target="#slider-carousel" data-slide-to="0" class="active" ></li>
+                            <li data-target="#slider-carousel" data-slide-to="1"></li>
+                            <li data-target="#slider-carousel" data-slide-to="2"></li>
+                            <li data-target="#slider-carousel" data-slide-to="3"></li>
+                        </ol>
+
+                        <div class="carousel-inner">
+                            <div class="item active">
+                              <div class="vt">
+                               <div class="col-sm-6">
+                                    <h1>Expansion Teaser</h1>
+                                </div>
+                                
+                                <div class="col-sm-6">
+                                    
+                                     <iframe  src="https://www.youtube.com/embed/2DnGJ1SD09U" width="560" height = "315" frameborder="0" allowfullscreen></iframe></div></div>
+                                </div>
+                                 
+                            <div class="item">
+                                  <div class="vt">
+                                <div class="col-sm-6">
+                                    <h1>Launch Trailer</h1>
+                                    
+                                
+                                <div class="col-sm-6">
+                                  
+                                         <iframe  src="https://www.youtube.com/embed/ffdxS9R6NTE" width="560" height = "315"  frameborder="0" allowfullscreen></iframe> </div>
+                                </div>
+                                
+                            </div>
+                            </div>
+                            <div class="item">
+                                  <div class="vt">
+                                <div class="col-sm-6">
+                                    <h1>More Picture</h1>
+                                    
+                                </div>
+                                
+                                <div class="col-sm-6">
+                                     <img class = "dim"  src="w1.jpg" alt="">
+                                </div>
+                                </div>
+                            </div>
+                            
+                            <div class="item ">
+                                 <div class="vt">
+                               <div class="col-sm-6">
+                                    <h1>More Picture</h1>
+                                    
+                                </div>
+                                <div class="col-sm-6">
+                                   <img class = "dim" src="w2.jpg" alt="">
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#slider-carousel" class="left control-carousel hidden-xs" data-slide="prev">
+                            <i class="fa fa-angle-left"></i>
+                        </a>
+                        <a href="#slider-carousel" class="right control-carousel hidden-xs" data-slide="next">
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                            
+                                </div></div>
+							
+							<div class="tab-pane fade" id="award" >
+								<div class="col-sm-12">
+								<div class = "vt">
+								 <h2>Metacritic User Score: 8.9<br>Metascore: N/A</h2></div>
+									<img class = "dim"  src="w3.jpg" alt="">
+                                   
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					
+					<div class="recommended_items"><!--recommended_items-->
+						<h2 class="title text-center">Games You may like</h2>
+						
+						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
+							
+								<div class="item">	
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+												
+													<img src="witcherps.jpg" alt="" style = "height:300px"/>
+													<h2>The Witcher 3: Wild Hunt</h2>
+													<a href = "witcherps.html">PS4</a> |
+													 <a href = "witcherxbox.html">Xbox One</a> |
+													 <a href = "witcherpc.html">PC</a>
+													
+													
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="F1.jpg" alt="" style = "height:300px" />
+													<h2>Fallout 4</h2>
+													<a href = "fallps.html">PS4</a> |
+                                                    <a href = "fallxbox.html">Xbox One</a> |
+                                                    <a href = "fallpc.html">PC</a> 
+													
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+												
+													<img src="halor.png" alt="" style = "height:300px"/>
+													<h2>Halo 5: Guardians</h2>
+													<a href = "halo.html">Xbox One Only</a> 
+													
+													
+												</div>
+											</div>
+										</div>
+									</div>
+									
+								</div>
+								
+							</div>
+							
+						</div>
+					
+				</div>
+                                    
+                                    </div></div>
+					</div>
+					
+				
+
+    <footer id="footer">
+        <!--Footer-->
+        <div class="footer-widget">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-2">
+                        <div class="single-widget">
+                            <h2>More Sites</h2>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="http://www.ign.com">IGN</a></li>
+                                <li><a href="http://www.gamespot.com">Gamespot</a></li>
+                                <li><a href="http://www.polygon.com">Polygon</a></li>
+                                <li><a href="http://www.metacritic.com/game">Metacritic</a></li>
+                                <li><a href="http://www.escapistmagazine.com">Escapist</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="single-widget">
+                            <h2>Game</h2>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="playstation.html">PLAYSTATION</a></li>
+                                
+                                          <li><a href="xbox.html">XBOX</a></li>
+                                    
+                                <li><a href="nintendo.html">Nintendo</a></li>                                 
+                                             <li><a href="pc.html">PC</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="single-widget">
+                            <h2>More</h2>
+                            <ul class="nav nav-pills nav-stacked">
+                                <li><a href="about.html">About us</a></li>
+                                <li><a href="contact.html">Contact US</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <p class="pull-left">Copyright © 2015 Chris &amp; Chen. All rights reserved.</p>
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!--/Footer-->
+
+
+
+
+</body>
+
+</html>

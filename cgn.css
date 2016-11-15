@@ -10,7 +10,7 @@ header, footer, nav, article, section, figure, figcaption, h1, h2, h3, ul, li, b
 
 
 /* Sectioner */
- header,main, footer, #profile {
+header,main, footer, #profile {
     background: goldenrod;
     border: 2px solid grey;
     border-radius: 1em;
@@ -19,13 +19,11 @@ header, footer, nav, article, section, figure, figcaption, h1, h2, h3, ul, li, b
     font-family: "Georgia", "Arial", serif;
 
 }
-#regi tr td{
-    padding: 20px;
-}
+
+
 #logo{
     float:left;
     width:25%;
-    
 }
 
 #logo img{
@@ -55,20 +53,32 @@ h2 {
 }
 #navi{
     float:left;
-    max-width: 60%;
+    max-width: 70%;
     font-size:1.2rem;
-    margin-left:80px;
+    margin-left:0px;
 
 }
+
+#navi nav {
+    alignment: center;
+}
+
 #navi nav p {
-    margin-left:30px;
-    
+    margin-left:50px;
+
 }
 #navi nav p a{
-    padding:20px;
+    padding:15px;
     letter-spacing:1.5px;
+    font-size: medium;
 
 }
+
+#navi nav p strong {
+    font-size: large;
+    color: grey;
+}
+
 #login{
     float:right;
     margin_top:5px;
@@ -184,9 +194,9 @@ tfoot td{
     left: 0px;
 }
 tfoot td input{
-
     margin: 10px;
 }
+
 #standby {
     min-width: 92%;
     margin-top: 30px;
@@ -197,10 +207,3 @@ tfoot td input{
     font-size: xx-large;
 }
 
-#regis{
-    width:780px;
-    height: 500px;
-}
-#regi tr{
-    height:100px;;
-}
